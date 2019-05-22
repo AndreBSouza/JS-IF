@@ -44,7 +44,7 @@ if (drink=="1" || drink=="Refrigerante") {
 }
 if (drink=="2" || drink=="Suco Natural") {
     drink=300
-    alert("Você irá consumir 300 calorias na bebida.")
+    alert("Você irá consumir 70 calorias na bebida.")
 }
 if (drink=="3" || drink=="Água") {
     drink=0
