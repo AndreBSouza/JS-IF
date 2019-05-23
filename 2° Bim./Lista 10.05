@@ -2,7 +2,7 @@
 1.
 Faça um programa para ler dois números e uma operação matemática(+, -, * ou /) e que ao final mostre o resultado.
 */
-var op=prompt("Digite a operação a ser efetuada(+, -, *, /, potenciação ou radiciação):");
+var op=prompt("Digite a operação a ser efetuada(+, -, *, /, ^ ou v¬):");
 if (op=="/"){
   var n1=Number(prompt("Digite o dividendo:"));
   var n2=Number(prompt("Digite o divisor:"));
@@ -23,12 +23,12 @@ if (op=="-"){
   var n2=Number(prompt("Digite o segundo número:"));
   alert(n1-n2)
 }
-if (op=="potenciação") {
+if (op=="^") {
   var n1=Number(prompt("Digite a base:"));
   var n2=Number(prompt("Digite o expoente"));
   alert(n1**n2)
 }
-if (op=="radiciação") {
+if (op=="v¬") {
   var n1=Number(prompt("Digite o radicando:"));
   var n2=Number(prompt("Digite o índice:"));
   alert(n1**(1/n2))
