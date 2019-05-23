@@ -79,7 +79,7 @@ var largjan=Number(prompt("Digite a largura da janela:"));
 var altcx=Number(prompt("Digite a altura da caixa:"));
 var largcx=Number(prompt("Digite a largura da caixa:"));
 var profcx=Number(prompt("Digite a profundidade da caixa:"));
-if ((altjan>=altcx && (altjan>=largcx || altjan>=profcx))||(largjan>=altcx && (largjan>=largcx || largjan>=profcx)) {
+if ((altjan>altcx && (altjan>largcx || altjan>profcx))||(largjan>altcx && (largjan>largcx || largjan>profcx))) {
     alert("A caixa passa pela janela!")
 } else {
     alert("A caixa não passa pela janela!")
