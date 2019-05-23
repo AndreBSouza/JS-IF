@@ -1,0 +1,35 @@
+//1.
+var res;
+var op=prompt("Digite a operação a ser efetuada(+, -, *, /, ^ ou v¬):");
+switch (op) {
+    case "+":
+        var n1=Number(prompt("Digite o primeiro número:"));
+        var n2=Number(prompt("Digite o segundo número:"));
+        alert(n1+n2)
+        break;
+    case "-":
+        var n1=Number(prompt("Digite o primeiro número:"));
+        var n2=Number(prompt("Digite o segundo número:"));
+        alert(n1-n2);
+        break;
+    case "*":
+        var n1=Number(prompt("Digite o primeiro fator:"));
+        var n2=Number(prompt("Digite o segundo fator:"));
+        alert(n1*n2);
+        break;
+    case "/":
+        var n1=Number(prompt("Digite o dividendo:"));
+        var n2=Number(prompt("Digite o divisor:"));
+        alert(n1/n2);
+        break;
+    case "v¬":
+        var n1=Number(prompt("Digite o radicando:"));
+        var n2=Number(prompt("Digite o índice:"));
+        alert(n1**(1/n2))
+        break;
+    case "^":
+        var n1=Number(prompt("Digite a base:"));
+        var n2=Number(prompt("Digite o expoente"));
+        alert(n1**n2)
+        break;
+}
