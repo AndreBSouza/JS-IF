@@ -6,3 +6,10 @@ alert(Math.ceil(A/(C-1)))
 
 
 //2.Xadrez
+var L=parseInt(prompt("Digite o número de linhas no tabuleiro:"));
+var C=parseInt(prompt("Digite o número de colunas do tabuleiro:"));
+if (((L%2==0) && (C%2==0))||((L%2!=0) && (C%2!=0))) {
+    alert(1)
+} else {
+    alert(0)
+}
