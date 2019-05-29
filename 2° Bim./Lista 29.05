@@ -1,0 +1,8 @@
+//1.Teleférico
+var C=parseInt(prompt("Digite a capacidade da cabine:"));
+var A=parseInt(prompt("Digite a  quantidade de alunos:"));
+alert(Math.ceil(A/(C-1)))
+
+
+
+//2.Xadrez
