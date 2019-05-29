@@ -13,3 +13,10 @@ if (((L%2==0) && (C%2==0))||((L%2!=0) && (C%2!=0))) {
 } else {
     alert(0)
 }
+
+
+
+var L1=Number(prompt("Digite a largura do o o(em metros):"));
+var C1=Number(prompt("Digite o comprimento do o o (em metros):"));
+var L2=Number(prompt("Digite a largura do o outro (em metros):"));
+var C2=Number(prompt("Digite do o outro (em metros):"));
