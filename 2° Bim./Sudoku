@@ -1,0 +1,27 @@
+var A1="_1_|"
+var A2="___|"
+var A3="___|"
+var A4="___"
+var B1="___|"
+var B2="___|"
+var B3="_2_|"
+var B4="___"
+var C1="___|"
+var C2="___|"
+var C3="___|"
+var C4="___"
+var D1="___|"
+var D2="_3_|"
+var D3="___|"
+var D4="___" 
+alert("Olá, vamos jogar uma partida de Sudoku? Eu irei te apresentar o jogo e direi como você irá jogar.")
+alert("1-O jogo começará nesta tabela:\n  1   2   3   4 \nA "+A1+A2+A3+A4+"\nB "+B1+B2+B3+B4+"\nC "+C1+C2+C3+C4+"\nD "+D1+D2+D3+D4+"\n2-A cada rodada eu irei perguntar em qual casa você gostaria de jogar e qual número de 0 até 3 você gostaria de colocar nesta casa.\n3-Ao final de cada rodada eu irei te mostrar a nova tabela e irei pedir sua nova jogada.\n4-Não pode existir, na mesma linha ou coluna, dois números iguais.\n5-Caso você erre, eu irei avisar você para que possa corrigir o erro.\n6-Caso você erre três vezes você perderá o jogo.\n7-Caso você não queira mais jogar digite 'não' e você não estará mais no jogo.\n7-Você também pode usar anotações: °¹²³.")
+var P=prompt("Digite 
+
+
+
+   1   2   3   4
+A _1_|___|___|___
+B ___|___|_2_|___
+C ___|___|___|___ 
+D ___|_3_|___|___
