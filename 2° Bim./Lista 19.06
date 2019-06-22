@@ -40,6 +40,4 @@ while (N!=0){
   N=Number(prompt("Digite um outro número:"));
 }
 var M=SN/QN;
-alert("A soma dos pares é: "+SP);
-alert("A quantidade de ímpares é: "+QI);
-alert("A média dos números é: "+M);
+alert("~A soma dos pares é: "+SP+"\n~A quantidade de ímpares é: "+QI+"\n~A média de todos os números é: "+M);
