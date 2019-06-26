@@ -3,12 +3,38 @@
 var ND=1
 var SN=0
 var N=Number(prompt("Digite um número:"));
+SN+=N
 while (ND<10) {
 	ND++;
-	SN+=N;
 	N=Number(prompt("Digite um outro número:"));
+	SN+=N;
 }
 alert("A soma desses números é: "+SN)
+
+//versão sem while(e pior)
+
+var SN=0;
+var N=Number(prompt("Digite um número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+N=Number(prompt("Digite um outro número:"));
+SN+=N;
+alert(SN)
 
 
 
@@ -45,7 +71,7 @@ while (N>=0) {
 var x=Number(prompt("Digite um número:"));
 var f;
 while (x!=0) {
-	f=x-5*x+6;
+	f=(x*x)-(5*x) +6;
 	alert("f ("+x+") = "+f);
 	x=Number(prompt("Digite um outro número:"));
 }
