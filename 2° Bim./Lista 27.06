@@ -1,0 +1,11 @@
+//série de números: 1,4,9,16,25,36...
+var N=Number(prompt("Digite a posição desejada:"));
+var c=1;
+var q=c*c;
+var x=q;
+while (c<N) {
+    c++;
+    q=c*c;
+    x+=", "+q;
+}
+alert(x)
