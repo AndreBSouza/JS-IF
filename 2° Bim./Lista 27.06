@@ -1,4 +1,4 @@
-//série de números: 1,4,9,16,25,36...
+//1. Série de números: 1,4,9,16,25,36...Mostrar o número na N-ésima posição
 var N=Number(prompt("Digite a posição desejada:"));
 var c=1;
 var q=c*c;
@@ -10,3 +10,20 @@ while (c<N) {
 }
 alert(x)
 
+
+
+//2. Ler até digitar zero, apresentar o maior e o menor
+
+var N=Number(prompt("Digite um número:"));
+var ma=N;
+var me=N;
+while (N!=0 && N!=0) {
+    if (N>ma) {
+        ma=N;
+    }
+    if (N<me) {
+        me=N;
+    }
+    N=Number(prompt("Digite um outro número:"));
+}
+alert("O maior: "+ma+" e o menor: "+me)
