@@ -27,3 +27,19 @@ while (N!=0 && N!=0) {
     N=Number(prompt("Digite um outro número:"));
 }
 alert("O maior: "+ma+" e o menor: "+me)
+
+
+
+//3. Transformar decimal em binário
+
+var N = parseInt(prompt("Digite um número inteiro:"));
+var R = N%2;
+var Q = Math.floor(N/2);
+var A = "";
+while (Q!=0){
+R = N%2;
+Q = Math.floor(N/2);
+N = Q;
+A = ""+R + A;
+}
+alert(A);
