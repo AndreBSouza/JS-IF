@@ -1,0 +1,17 @@
+/*
+Apresentar os resultados de uma tabuada de um número qualquer, a qual deve ser mostrada no seguinte formato, considerando como exemplo o fornecimento do número 2:
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+(...)
+2 x 10 = 20
+
+COM FOR
+*/
+
+var N=Number(prompt("Digite um número:"));
+var tabu = "***TABUADA DO "+N+"***";
+for (var c=1; c<11; c++) {
+    tabu += "\n"+N+" x "+c+" = "+(N*c)
+}
+alert(tabu)
