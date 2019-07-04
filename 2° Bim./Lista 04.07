@@ -1,4 +1,5 @@
 /*
+Exemplo:
 Apresentar os resultados de uma tabuada de um número qualquer, a qual deve ser mostrada no seguinte formato, considerando como exemplo o fornecimento do número 2:
 2 x 1 = 2
 2 x 2 = 4
@@ -15,3 +16,41 @@ for (var c=1; c<11; c++) {
     tabu += "\n"+N+" x "+c+" = "+(N*c)
 }
 alert(tabu)
+
+//dnv
+
+for(var c1=1; c1<11; c1++) {
+    console.log("***TABUADA DO "+c1+"***")
+    for(var c2=1; c2<11;c2++) {
+        console.log(c1+" x "+c2+" = "+(c1*c2));
+    }
+    console.log("");
+}
+
+
+
+/*
+1.
+Elaborar um programa que leia um número e exiba asteriscos na página, em linhas diferentes.
+A cada nova linha o número deverá ser incrementado.
+Ex:
+N=5
+*
+**
+***
+****
+*****
+*/
+
+var N=parseInt(prompt("Digite um número:"));
+var c =""
+for(var x =0; x<N; x++) {
+    c+="*"
+    console.log(c)
+}
+
+
+
+/*
+2.
+Criar um programa que
