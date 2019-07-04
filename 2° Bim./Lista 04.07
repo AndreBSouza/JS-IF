@@ -17,8 +17,6 @@ for (var c=1; c<11; c++) {
 }
 alert(tabu)
 
-//dnv
-
 for(var c1=1; c1<11; c1++) {
     console.log("***TABUADA DO "+c1+"***")
     for(var c2=1; c2<11;c2++) {
@@ -53,4 +51,16 @@ for(var x =0; x<N; x++) {
 
 /*
 2.
-Criar um programa que
+Criar um programa que leia um número e mostre se ele é ou não é perfeito. 
+Um número perfeito é aquele que é igual a soma dos seus divisores inteiros(exceto o próprio número).
+O programa deve exibir os divisores do número e a soma deles. 
+Ex: 28 (1, 2, 4, 7, 14); 6 (1, 2, 3)
+*/
+
+var N=parseInt(prompt("Digite um número: "));
+for (var d=0, var x="", var a=0; d<n; d++) {
+    if (N%d==0) {
+        x+=d+", ";
+        a+=d;
+    }
+}
