@@ -1,0 +1,5 @@
+//1. mostrar os n primeiros números primos
+
+//2. os divisores de 12 são 1, 2, 3, 4, 6 e 12. o maior divisor de 12 que não excede a raiz quadrada de 12 é 3. podemos chamar o maior divisor de um inteiro n que não excede a raiz quadrada de n de PRQ. faça um programa que calcule PRQ sem usar funções
+
+//3. calcular potenciação 
