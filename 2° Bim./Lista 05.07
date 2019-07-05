@@ -1,9 +1,20 @@
 //1. mostrar os n primeiros números primos
 var n=parseInt(prompt("Digite o número de primos que tu quer:"));
-for (var qp=0, var x=1, var a; qp<n; x++) {
-    if (x==0) {
-        console
+//RESOLUÇÃO: PEGA OS DIVISORES DOS NÚMEROS E COLOCA UM CONTADOR NOS QUE TEM SÓ DOIS AAAAAAAAAAAAAAAAAA
+
+
+
+
 //2. os divisores de 12 são 1, 2, 3, 4, 6 e 12. o maior divisor de 12 que não excede a raiz quadrada de 12 é 3. podemos chamar o maior divisor de um inteiro n que não excede a raiz quadrada de n de pseudo raiz quadrada(PRQ). faça um programa que calcule PRQ sem usar funções matemáticas.
+var N=parseInt(prompt("Digite um número: "));
+var x="( ";
+var a=0;
+for (var d=0; d<N; d++) {
+    if (N%d==0) {
+        x+=d+" ";
+        a+=d;
+    }
+}
 
 //3. calcular potenciação sem funções matemáticas
 var N1=parseInt(prompt("Digite a base:"));
