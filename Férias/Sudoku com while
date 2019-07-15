@@ -31,6 +31,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -44,6 +45,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -57,6 +59,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -70,6 +73,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -83,6 +87,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -96,6 +101,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -109,6 +115,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -122,6 +129,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -135,6 +143,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -148,6 +157,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -161,6 +171,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -174,6 +185,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
@@ -187,6 +199,7 @@ while (err<3 && P!="não" && N!="não") {
 		    }
 		    if (err==3) {
 			    alert("Você errou três vezes! Você perdeu!");
+				break;
 		    }
 	    }
     }
