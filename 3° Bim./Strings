@@ -1,0 +1,7 @@
+var y = String.fromCharCode("abc".charCodeAt(0)-32) + String.fromCharCode("abc".charCodeAt(1)-32) + String.fromCharCode("abc".charCodeAt(2)-32); //"ABC"
+
+var y = ""+123; //"123"
+var y = 123.toString(); //"123"
+
+var y = "abc";
+y.repeat(2); //"abcabc"
