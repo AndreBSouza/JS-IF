@@ -1,0 +1,26 @@
+//1. Peça uma palavra e apresente ela ao contrário.
+
+var p=prompt("Digite uma palavra:");
+var x="";
+for (var c =(Number(p.length))-1; c>=0; c--) {
+    x+=p[c];
+}
+alert(x+" ao contrário é "+x);
+
+
+
+//2. Peça uma palavra e apresente ela ao contrário e maiúscula.
+
+var p=prompt("Digite uma palavra:");
+var x="";
+for (var c =(Number(p.length))-1; c>=0; c--) {
+    x+=p[c];
+}
+alert(x+" ao contrário é "+x.toUpperCase());
+
+
+var N=parseInt(prompt("Digite o número de figurinhas que devem ser coladas no álbum para ele ser completo:"));
+var M=parseInt(prompt("Digite o número de figurinhas que vc tem:"));
+var c=0;
+
+while (c<N)
