@@ -27,7 +27,7 @@ var p, x="", a=M;
 for (var c=0; c<M; c++) {
 	p=parseInt(prompt("Digite o número dessa figurinha:"));
 	x+=p;
-	if (x[x.indexOf(p)]==x[x.indexOf(p, x.indexOf(p)+1)]) {
+	if (p==x[x.indexOf(p, x.indexOf(p)+1)]) {
 		a--;
 	}
 }
