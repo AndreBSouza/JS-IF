@@ -1,0 +1,70 @@
+/*
+1. 
+Escreva um programa que codifica palavras da língua inglesa em Pig Latin.
+O Pig Latin é uma forma de linguagem codificada utilizada por diversão.
+Existem muitas variações nos métodos utilizados para formar palavras em Pig Latin.
+Para simplificar, utilize o seguinte método.
+Para traduzir uma palavra em inglês para uma palavra em Pig Latin, coloque a primeira letra da palavra em inglês no final da palavra e adicione as letras “ay”.
+Assim, a palavra “jump” torna-se “umpjay”, a palavra “the” torna-se “hetay” e a palavra “computer” torna-se “omputercay”.
+*/
+
+var p=prompt("Digite uma palavra:");
+alert(p+" em Pig Latin é "+(p.substr(1))+(p[0])+"ay");
+
+
+
+/*
+2. 
+Escreva um programa que leia uma palavra ou frase e também leia uma letra.
+O programa deve mostrar quantas vezes a letra aparece na palavra ou frase.
+*/
+
+var pf=prompt("Digite uma frase ou uma palavra:");
+var l=prompt("Digite uma letra:")
+var x=pf.length;
+var c=0;
+while (x>0){
+  x--;
+  var a=pf[x];
+  if (l==a){
+    c++;
+  }
+}
+alert(l+" se repete "+c+" vezes.");
+
+
+
+/*
+3. 
+Escreva um programa que leia uma palavra sem acentos e cedilha e mostre essa palavra em letras minúsculas, com a primeira letra em maiúsculo.
+*/
+
+var p=prompt("Digite uma palavra:");
+alert(p[0].toUpperCase()+p.substr(1).toLowerCase());
+
+
+
+/*
+4. 
+Escreva um programa que leia o código DDD e um número de telefone e monte uma String no formato: (DD) NNNN-NNNN, em que D representa um dígito do DDD e N um dígito do número de telefone.
+*/
+
+var D=prompt("Digite seu DDD:");
+var N=prompt("Digite seu número de telefone:");
+alert("("+D+") "+N.substr(0,4)+"-"+N.substr(4));
+
+
+
+/*
+5. 
+Escreva um programa que leia um String contendo um número de telefone no formato (DD) DDDD-DDDD, em que D representa um dígito do número (o que está entre parênteses é o número do DDD).
+O programa deve verificar se o número está escrito de forma correta (pode haver um número de
+espaços em branco qualquer entre o número de DDD e o número do telefone. Caso o número não
+tenha sido digitado corretamente, o programa deve mostrar uma mensagem “Número de telefone
+incorreto.”. Caso contrário, o programa deve colocar o número do DDD em uma variável 
+int
+ e o
+número do telefone em outra variável  
+int
+. O conteúdo de cada uma das variáveis deve ser
+mostrado na tela, separadamente
