@@ -58,13 +58,16 @@ alert("("+D+") "+N.substr(0,4)+"-"+N.substr(4));
 /*
 5. 
 Escreva um programa que leia um String contendo um número de telefone no formato (DD) DDDD-DDDD, em que D representa um dígito do número (o que está entre parênteses é o número do DDD).
-O programa deve verificar se o número está escrito de forma correta (pode haver um número de
-espaços em branco qualquer entre o número de DDD e o número do telefone. Caso o número não
-tenha sido digitado corretamente, o programa deve mostrar uma mensagem “Número de telefone
-incorreto.”. Caso contrário, o programa deve colocar o número do DDD em uma variável 
-int
- e o
-número do telefone em outra variável  
-int
-. O conteúdo de cada uma das variáveis deve ser
-mostrado na tela, separadamente
+O programa deve verificar se o número está escrito de forma correta (pode haver um número de espaços em branco qualquer entre o número de DDD e o número do telefone).
+Caso o número não tenha sido digitado corretamente, o programa deve mostrar uma mensagem “Número de telefone incorreto.”.
+Caso contrário, o programa deve colocar o número do DDD em uma variável int e o número do telefone em outra variável int.
+O conteúdo de cada uma das variáveis deve ser mostrado na tela, separadamente.
+*/
+
+var D=prompt("Digite seu número de telefone no formato: (DD) DDDD-DDDD, em que (DD) representa o seu DDD:");
+if (D[0]=="(" && D[3]==")" && D[4]==" " && D[9]=="-" && D.length==13) {
+  var DD=D[1]+D[2];
+  var NN=D.substr(5);
+} else {
+  alert("Número de telefone incorreto.");
+}
