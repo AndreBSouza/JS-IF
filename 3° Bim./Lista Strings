@@ -73,3 +73,37 @@ if (D[0]=="(" && D[3]==")" && D[4]==" " && D[9]=="-" && D.length==14) {
 } else {
   alert("Número de telefone incorreto.");
 }
+
+
+
+/*
+6.
+Escreva um programa que é capaz de gerar o plural de algumas palavras em inglês.
+O programa deve ler uma palavra, convertê-la para letras minúsculas, e mostrar seu plural na tela.
+Utilize as seguintes regras para o plural:
+	* A regra geral para o plural é acrescentar um 's' no final da palavra. Exemplos:
+		◦ book = books
+		◦ girl = girls
+		◦ day = days
+	* Para palavras terminadas em 'o', 'ch', 'sh', 'ss', 'x' e 'z', forma-se o plural acrescentando 'es' ao final da palavra. Exemplos:
+		◦ tomato = tomatoes
+		◦ church = churches
+		◦ brush = brushes
+		◦ glass = glasses
+		◦ box = boxes
+		◦ buzz = buzzes
+	* Palavras terminadas em 'y', precedidos de consoante, perdem o 'y' e recebem 'ies' no final. Exemplos:
+		◦ country = countries
+		◦ family = families
+*/
+
+var p=(prompt("Digite uma palavra em inglês:")).toLowerCase();
+var a=p;
+if (p[p.length-1]=="o" || (p[p.length-1]=="h" && p[p.length-2]=="c") || (p[p.length-1]=="h" && p[p.length-2]=="s") || (p[p.length-1]=="s" && p[p.length-2]=="s") || p[p.length-1]=="x" || p[p.length-1]=="z") {
+	p+="es";
+} else if ((p[p.length-1]=="y") && (p[p.length-2]!="a" && p[p.length-2]!="e" && p[p.length-2]!="i" && p[p.length-2]!="o" && p[p.length-2]!="u")) {
+	p=p.substring(0,(p.length-1)) + "ies";
+} else {
+	p+="s";
+}
+alert("O plural de "+a+" é "+p);
