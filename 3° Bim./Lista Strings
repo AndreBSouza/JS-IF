@@ -185,3 +185,43 @@ if (!(isNaN(DD)) && !(isNaN(MM)) && !(isNaN(AAAA)) && d.length==10 && (d[2]=="/"
 } else {
 	alert(d+" não é uma data válida.")
 }
+
+
+
+/*
+9.
+Os cheques impressos por computador contém um número fixo de espaços em que o computador pode imprimir uma quantia.
+Suponha que um cheque de pagamento contenha oito espaços em que o computador pode imprimir seu valor.
+Se o valor for grande, os oito espaços serão preenchidos. O valor 1230,60 ficaria:
+1.230,60 (valor do cheque)
+--------
+01234567 (posição dos números)
+
+Por outro lado, se o valor for menor que R$ 1000,00, vários espaços seriam deixados em branco. Por exemplo:
+   99,87 (valor do cheque)
+--------
+01234567 (posição dos números)
+
+contém três espaços em branco.
+Se um cheque é impresso com espaços em branco, é mais fácil para alguém alterar o valor do cheque.
+Para evitar que um cheque seja alterado, muitos sistemas de preenchimento de cheque inserem asteriscos no início para proteger o valor, como segue:
+***99,87 (valor do cheque)
+--------
+01234567 (posição dos números)
+
+Escreva um programa que leia uma quantia em dinheiro que será impressa em um cheque e depois imprime o valor em formato de cheque protegido com asteriscos se necessário.
+Suponha que nove espaços estão disponíveis para imprimir o valor.
+*/
+
+var q=prompt("Digite a quantia de dinheiro que será impressa no cheque:");
+if (q.length==9) {
+	q=q.substr(0,3)+"."+q.substr(3);
+}else if (q.length==8) {
+	q=q.substr(0,2)+"."+q.substr(2);
+} else if(q.length==7) {
+	q=q.substr(0,1)+"."+q.substr(1);
+}
+for (var a=q.length; a<9; a++) {
+	q="*"+q;
+}
+alert(q);
