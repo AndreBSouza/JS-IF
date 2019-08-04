@@ -68,8 +68,12 @@ var D=prompt("Digite seu número de telefone no formato: (DD) DDDD-DDDD, em que 
 if (D[0]=="(" && D[3]==")" && D[4]==" " && D[9]=="-" && D.length==14) {
   var DD=D[1]+D[2];
   var NN=D.substring(5,9)+D.substring(10);
-  alert("Seu DDD: "+DD);
-  alert("Seu número: "+NN);
+  if (!(isNaN(Number(DD))) && !(isNaN(Number(NN)))) {
+	alert("Seu DDD: "+DD);
+	alert("Seu número: "+NN);
+  } else {
+	alert("Número de telefone incorreto.");
+  }
 } else {
   alert("Número de telefone incorreto.");
 }
@@ -158,3 +162,26 @@ if (MM=="12") {
 	MM="dezembro";
 }
 alert(d+" = "+DD+" de "+MM+" de "+AAAA);
+
+
+
+/*
+8.
+Escreva um programa que leia uma data no formato DD/MM/AAAA como String e diga se a data é válida ou não.
+Uma data válida deve ter tamanho 10, possuir dígitos numéricos para D, M e A e conter /, ­ ou um ponto final separando dia, mês e ano.
+O valor do mês deve estar entre 1 e 12 e o dia deve ser um número entre 1 e o número máximo de dias do mês.
+*/
+
+var d=prompt("Digite uma data no formato DD/MM/AAAA:");
+var DD=Number(d.substr(0,2));
+var MM=Number(d.substr(3,2));
+var AAAA=Number(d.substr(6,4));
+if (!(isNaN(DD)) && !(isNaN(MM)) && !(isNaN(AAAA)) && d.length==10 && (d[2]=="/" || d[2]=="-" || d[2]==".") && (d[5]=="/" || d[5]=="-" || d[5]==".") && MM>=1 && MM<=12) {
+	if ((MM==1 || MM==3 || MM==5 || MM==7 || MM==8 || MM==10 || MM==12) && (DD<=31 && DD>=1) || ((MM==4 || MM==6 || MM==9 || MM==11) && (DD>=1 && DD<=30)) || ((MM==2 && (AAAA>1584 && (AAAA%400==0 || (AAAA%4==0 && AAAA%100!=0)) && (DD>=1 && DD<=29)) || (!(AAAA%400==0 || (AAAA%4==0 && AAAA%100!=0)) && (DD>=1 && DD<=28))))) {
+		alert(d+" é uma data válida.");
+	} else {
+		alert(d+" não é uma data válida.");
+	}
+} else {
+	alert(d+" não é uma data válida.")
+}
