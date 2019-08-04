@@ -107,3 +107,54 @@ if (p[p.length-1]=="o" || (p[p.length-1]=="h" && p[p.length-2]=="c") || (p[p.len
 	p+="s";
 }
 alert("O plural de "+a+" é "+p);
+
+
+
+/*
+7.
+As datas são impressas em vários formatos comuns. Dois dos formatos mais comuns são:
+25/04/1955 e 25 de abril de 1955
+Escreva um programa que lê uma data no primeiro formato (como String) e mostre essa data no segundo formato.
+*/
+
+var d=prompt("Digite uma data no formato DD/MM/AAAA:");
+var DD=d.substring(0,2);
+var MM=d.substring(3,5);
+var AAAA=d.substring(6);
+if (MM=="01") {
+	MM="janeiro";
+}
+if (MM=="02") {
+	MM="fevereiro";
+}
+if (MM=="03") {
+	MM="março";
+}
+if (MM=="04") {
+	MM="abril";
+}
+if (MM=="05") {
+	MM="maio";
+}
+if (MM=="06") {
+	MM="junho";
+}
+if (MM=="07") {
+	MM="julho";
+}
+if (MM=="08") {
+	MM="agosto";
+}
+if (MM=="09") {
+	MM="setembro";
+}
+if (MM=="10") {
+	MM="outubro";
+}
+if (MM=="11") {
+	MM="novembro";
+}
+if (MM=="12") {
+	MM="dezembro";
+}
+alert(d+" = "+DD+" de "+MM+" de "+AAAA);
