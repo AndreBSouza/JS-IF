@@ -65,9 +65,11 @@ O conteúdo de cada uma das variáveis deve ser mostrado na tela, separadamente.
 */
 
 var D=prompt("Digite seu número de telefone no formato: (DD) DDDD-DDDD, em que (DD) representa o seu DDD:");
-if (D[0]=="(" && D[3]==")" && D[4]==" " && D[9]=="-" && D.length==13) {
+if (D[0]=="(" && D[3]==")" && D[4]==" " && D[9]=="-" && D.length==14) {
   var DD=D[1]+D[2];
-  var NN=D.substr(5);
+  var NN=D.substring(5,9)+D.substring(10);
+  alert("Seu DDD: "+DD);
+  alert("Seu número: "+NN);
 } else {
   alert("Número de telefone incorreto.");
 }
