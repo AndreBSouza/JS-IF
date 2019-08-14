@@ -3,4 +3,35 @@ var a=f.substr((Math.floor(Math.random()*(f.lenght))), 4);
 while (a.indexOf(" ") != -1) {
     a=f.substr((Math.floor(Math.random()*(f.lenght))), 4);
 }
-var p=prompt(
+var ac=0, pos=0;
+var p=prompt("Digite uma palavra de 4 letras:");
+var al="         AC.  POS.";
+while (p!=a) {
+    if (a.indexOf((p[0]))!=-1) {
+        ac++;
+        if(p[0] == a[0]) {
+            pos++;
+        }
+    }
+    if (a.indexOf((p[1]))!=-1) {
+        ac++;
+        if(p[1] == a[1]) {
+            pos ++;
+        }
+    }
+    if (a.indexOf((p[2]))!=-1) {
+        ac++;
+        if(p[2] == a[2]) {
+            pos ++;
+        }
+    }
+    if (a.indexOf((p[3]))!=-1) {
+        ac++;
+        if(p[3] == a[3]) {
+            pos ++;
+        }
+    }
+    al+="\n"+p+"  "+ac+"      "+pos;
+    p=prompt(al+"\n\n-Digite outra palavra de 4 letras:");
+    ac=0, pos=0;
+}
