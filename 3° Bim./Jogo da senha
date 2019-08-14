@@ -1,0 +1,4 @@
+var f="bola bolo faca vaca amor ódio meta galo gado mato mata liga copa taça data"
+var a=f.substr((Math.floor(Math.random()*(f.lenght))), 4);
+while (f.indexOf(" ") != -1) {
+    a=f.substr((Math.floor(Math.random()*(f.lenght))), 4);
