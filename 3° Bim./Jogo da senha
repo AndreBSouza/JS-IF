@@ -1,4 +1,6 @@
-var f="bola bolo faca vaca amor ódio meta galo gado mato mata liga copa taça data"
+var f="bola bolo faca vaca amor ódio meta galo gado mato mata liga copa taça data rede sala jogo porta aula mais foca lobo gato pato pata foco tato caco fato lata"
 var a=f.substr((Math.floor(Math.random()*(f.lenght))), 4);
-while (f.indexOf(" ") != -1) {
+while (a.indexOf(" ") != -1) {
     a=f.substr((Math.floor(Math.random()*(f.lenght))), 4);
+}
+var p=prompt(
