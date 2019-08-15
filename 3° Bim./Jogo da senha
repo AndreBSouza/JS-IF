@@ -1,4 +1,6 @@
 var x=prompt("1-Fácil\n2-Médio\n3-Difícil");
+
+
 if (x=="1" || x=="Fácil") {
     var f="bola bolo faca vaca amor ódio meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato caco fato lata"
     var a=f.substr((Math.floor(Math.random()*152)), 4);
@@ -50,63 +52,119 @@ if (x=="1" || x=="Fácil") {
     } else {
         alert("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".");
     }
-
-
-
-
-
-
-
-
-
-
-var m="bolas bolos facas vacas garfo  meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato caco fato lata"
-var a=m.substr((Math.floor(Math.random()*152)), 4);
-while (a.indexOf(" ") != -1) {
-    a=m.substr((Math.floor(Math.random()*152)), 4);
 }
-var ac=0, pos=0;
-var p=prompt("Digite uma palavra de 4 letras:");
-var al="PAL.  AC.  POS.";
-var c=0;
-if (p.length>4) {
-    alert("Digite uma palavra válida.");
+
+
+
+
+
+
+
+if (x=="2" || x=="Médio") {
+	var m="bolas bolos facas vacas garfo  meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato caco fato lata"
+	var a=m.substr((Math.floor(Math.random()*152)), 4);
+	while (a.indexOf(" ") != -1) {
+		a=m.substr((Math.floor(Math.random()*152)), 4);
+	}
+	var ac=0, pos=0;
+	var p=prompt("Digite uma palavra de 4 letras:");
+	var al="PAL.  AC.  POS.";
+	var c=0;
+	if (p.length>4) {
+		alert("Digite uma palavra válida.");
+	}
+	while (p!=a && c<10) {
+		if (p.indexOf((a[0]))!=-1) {
+			ac++;
+		}
+		if(p[0] == a[0]) {
+			pos++;
+		}
+		if (p.indexOf((a[1]))!=-1) {
+			ac++;
+		}
+		if(p[1] == a[1]) {
+			pos++;
+		}
+		if (p.indexOf((a[2]))!=-1) {
+			ac++;
+		}
+		if(p[2] == a[2]) {
+			pos++;
+		}
+		if (p.indexOf((a[3]))!=-1) {
+			ac++;
+		}
+		if(p[3] == a[3]) {
+			pos++;
+		}
+		al+="\n"+p+"  "+ac+"      "+pos;
+		p=prompt(al+"\n\n-Digite outra palavra de 4 letras:");
+		ac=0, pos=0;
+		c++;
+		if (p.length>4) {
+			alert("Digite uma palavra válida.");
+		}
+	}
+	if (a==p) {
+		alert("Parabéns! Você acertou!\nA palavra era "+a+".");
+	} else {
+		alert("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".");
+	}
 }
-while (p!=a && c<10) {
-    if (p.indexOf((a[0]))!=-1) {
-        ac++;
-    }
-    if(p[0] == a[0]) {
-            pos++;
-    }
-    if (p.indexOf((a[1]))!=-1) {
-        ac++;
-    }
-    if(p[1] == a[1]) {
-        pos++;
-    }
-    if (p.indexOf((a[2]))!=-1) {
-        ac++;
-    }
-    if(p[2] == a[2]) {
-        pos++;
-    }
-    if (p.indexOf((a[3]))!=-1) {
-        ac++;
-    }
-    if(p[3] == a[3]) {
-        pos++;
-    }
-    al+="\n"+p+"  "+ac+"      "+pos;
-    p=prompt(al+"\n\n-Digite outra palavra de 4 letras:");
-    ac=0, pos=0;
-    c++;
-    if (p.length>4) {
-        alert("Digite uma palavra válida.");
-    }
-}
-if (a==p) {
-    alert("Parabéns! Você acertou!\nA palavra era "+a+".");
-} else {
-    alert("Você ultrapassou o limite de tentativas.");
+
+
+
+
+if (x=="3" || x=="Difícil") {
+	var d="bolas bolos facas vacas garfo  meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato caco fato lata"
+	var a=d.substr((Math.floor(Math.random()*152)), 4);
+	while (a.indexOf(" ") != -1) {
+		a=d.substr((Math.floor(Math.random()*152)), 4);
+	}
+	var ac=0, pos=0;
+	var p=prompt("Digite uma palavra de 4 letras:");
+	var al="PAL.  AC.  POS.";
+	var c=0;
+	if (p.length>4) {
+		alert("Digite uma palavra válida.");
+	}
+	while (p!=a && c<10) {
+		if (p.indexOf((a[0]))!=-1) {
+			ac++;
+		}
+		if(p[0] == a[0]) {
+			pos++;
+		}
+		if (p.indexOf((a[1]))!=-1) {
+			ac++;
+		}
+		if(p[1] == a[1]) {
+			pos++;
+		}
+		if (p.indexOf((a[2]))!=-1) {
+			ac++;
+		}
+		if(p[2] == a[2]) {
+			pos++;
+		}
+		if (p.indexOf((a[3]))!=-1) {
+			ac++;
+		}
+		if(p[3] == a[3]) {
+			pos++;
+		}
+		al+="\n"+p+"  "+ac+"      "+pos;
+		p=prompt(al+"\n\n-Digite outra palavra de 4 letras:");
+		ac=0, pos=0;
+		c++;
+		if (p.length>4) {
+			alert("Digite uma palavra válida.\nA palavra era "+a+".");
+		}
+	}
+	if (a==p) {
+		alert("Parabéns! Você acertou!\nA palavra era "+a+".");
+	} else {
+		alert("Você ultrapassou o limite de tentativas.");
+	}
 }
