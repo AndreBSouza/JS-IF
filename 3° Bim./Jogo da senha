@@ -6,7 +6,7 @@ while (a.indexOf(" ") != -1) {
 alert(a);
 var ac=0, pos=0;
 var p=prompt("Digite uma palavra de 4 letras:");
-var al="         AC.  POS.";
+var al="PAL.  AC.  POS.";
 var c=0;
 while (p!=a && c<10) {
     if (p.indexOf((a[0]))!=-1) {
