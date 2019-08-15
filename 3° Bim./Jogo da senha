@@ -3,7 +3,6 @@ var a=f.substr((Math.floor(Math.random()*152)), 4);
 while (a.indexOf(" ") != -1) {
     a=f.substr((Math.floor(Math.random()*152)), 4);
 }
-alert(a);
 var ac=0, pos=0;
 var p=prompt("Digite uma palavra de 4 letras:");
 var al="PAL.  AC.  POS.";
@@ -19,19 +18,19 @@ while (p!=a && c<10) {
         ac++;
     }
     if(p[1] == a[1]) {
-            pos ++;
+        pos++;
     }
     if (p.indexOf((a[2]))!=-1) {
         ac++;
     }
     if(p[2] == a[2]) {
-        pos ++;
+        pos++;
     }
     if (p.indexOf((a[3]))!=-1) {
         ac++;
     }
     if(p[3] == a[3]) {
-        pos ++;
+        pos++;
     }
     al+="\n"+p+"  "+ac+"      "+pos;
     p=prompt(al+"\n\n-Digite outra palavra de 4 letras:");
@@ -39,5 +38,5 @@ while (p!=a && c<10) {
     c++;
 }
 if (a==p) {
-    alert("Parabéns! Você acertou!\nA palavra era "+a);
+    alert("Parabéns! Você acertou!\nA palavra era "+a+".");
 }
