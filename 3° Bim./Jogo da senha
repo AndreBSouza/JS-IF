@@ -1,6 +1,7 @@
 var x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss" || xx.toLowerCase="yup" || xx.toLowerCase="yes" || xx.toLowerCase="arra" || xx.toLowerCase="ãrrã" || xx.toLowerCase="arrã" || xx.toLowerCase="obv"; ) {
-	if (x=="1" || x.toLowerCase=="Fácil".toLowerCase) {
+var xx="sim";
+while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss" || xx.toLowerCase()=="yup" || xx.toLowerCase()=="yes" || xx.toLowerCase()=="arra" || xx.toLowerCase()=="ãrrã" || xx.toLowerCase()=="arrã" || xx.toLowerCase()=="obv") {
+	if (x=="1" || x.toLowerCase()=="Fácil".toLowerCase()) {
 		var f="bola bolo faca vaca amor ódio meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato fada fato lata"
 		do {
 			var a=f.substr((Math.floor(Math.random()*146)), 4);
@@ -8,44 +9,42 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 		var ac=0, pos=0;
 		var p=prompt("Digite uma palavra de até 4 letras:");
 		var al="PAL.  AC.  POS.";
-		if (p.length>4) {
-			alert("Digite uma palavra válida.");
-		}
 		for (var c=10; p!=a && c>0; c--) {
-			if (p.indexOf((a[0].toLowerCase))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
+			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[0]).toLowerCase == (a[0]).toLowerCase) {
+			if((p[0]).toLowerCase() == (a[0]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[1].toLowerCase))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
+			if (p.indexOf((a[1].toLowerCase()))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[1]).toLowerCase == (a[1]).toLowerCase) {
+			if((p[1]).toLowerCase() == (a[1]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[2].toLowerCase))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
+			if (p.indexOf((a[2].toLowerCase()))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[2]).toLowerCase == (a[2]).toLowerCase) {
+			if((p[2]).toLowerCase() == (a[2]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[3].toLowerCase))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
+			if (p.indexOf((a[3].toLowerCase()))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[3]).toLowerCase == (a[3]).toLowerCase) {
+			if((p[3]).toLowerCase() == (a[3]).toLowerCase()) {
 				pos++;
 			}
-			al+="\n"+p+"  "+ac+"      "+pos;
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 4 letras:");
-			ac=0, pos=0;
 			if (p.length>4) {
 				alert("Digite uma palavra válida.");
+			} else {
+				al+="\n"+p+"  "+ac+"      "+pos;
 			}
+			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 4 letras:");
+			ac=0, pos=0;
 		}
-		if (a.toLowerCase==p.toLowerCase) {
+		if (a.toLowerCase()==p.toLowerCase()) {
 			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
 				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
@@ -53,14 +52,14 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 			}
 		} else {
 			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
 				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
 			}
 		}
-	} else if (x=="2" || x.toLowerCase=="Médio".toLowerCase) {
+	} else if (x=="2" || x.toLowerCase()=="Médio".toLowerCase()) {
 		var m="porta carro matar falar jogar gasto vigor fator sagaz sutil plena nobre festa ganho caixa tarja preto carne carta fruta garfo lápis tinta fácil médio prato prata carga chave papel"
 		do {
 			var a=m.substr((Math.floor(Math.random()*174)), 5);
@@ -68,50 +67,48 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 		var ac=0, pos=0;
 		var p=prompt("Digite uma palavra de até 5 letras:");
 		var al="PAL.  AC.  POS.";
-		if (p.length>5) {
-			alert("Digite uma palavra válida.");
-		}
-		for (var c=15; p!=a && c>0; c--;) {
-			if (p.indexOf((a[0].toLowerCase))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
+		for (var c=15; p!=a && c>0; c--) {
+			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[0]).toLowerCase == (a[0]).toLowerCase) {
+			if((p[0]).toLowerCase() == (a[0]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[1].toLowerCase))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
+			if (p.indexOf((a[1].toLowerCase()))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[1]).toLowerCase == (a[1]).toLowerCase) {
+			if((p[1]).toLowerCase() == (a[1]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[2].toLowerCase))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
+			if (p.indexOf((a[2].toLowerCase()))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[2]).toLowerCase == (a[2]).toLowerCase) {
+			if((p[2]).toLowerCase() == (a[2]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[3].toLowerCase))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
+			if (p.indexOf((a[3].toLowerCase()))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[3]).toLowerCase == (a[3]).toLowerCase) {
+			if((p[3]).toLowerCase() == (a[3]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[4].toLowerCase))!=-1 || p.indexOf((a[4].toUpperCase))!=-1) {
+			if (p.indexOf((a[4].toLowerCase()))!=-1 || p.indexOf((a[4].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[4]).toLowerCase == (a[4]).toLowerCase) {
+			if((p[4]).toLowerCase() == (a[4]).toLowerCase()) {
 				pos++;
 			}
-			al+="\n"+p+"  "+ac+"      "+pos;
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 5 letras:");
-			ac=0, pos=0;
 			if (p.length>5) {
 				alert("Digite uma palavra válida.");
+			}else {
+				al+="\n"+p+"  "+ac+"      "+pos;
 			}
+			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 5 letras:");
+			ac=0, pos=0;
 		}
-		if (a.toLowerCase==p.toLowerCase) {
+		if (a.toLowerCase()==p.toLowerCase()) {
 			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
 				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
@@ -119,14 +116,14 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 			}
 		} else {
 			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
 				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
 			}
 		}
-	} else if (x=="3" || x.toLowerCase=="Difícil".toLowerCase) {
+	} else if (x=="3" || x.toLowerCase()=="Difícil".toLowerCase()) {
 		var d="morrer faltar correr sentar contar mandar orelha ouvido mérito pressa legado exímio infame êxito casual alusão gentil ficção utopia sóbrio formal idiota eficaz hábito paixão ovelha exibir ciente cômico bélica"
 		do { 
 			var a=d.substr((Math.floor(Math.random()*202)), 6);
@@ -134,56 +131,54 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 		var ac=0, pos=0;
 		var p=prompt("Digite uma palavra de até 6 letras:");
 		var al="PAL.  AC.  POS.";
-		if (p.length>6) {
-			alert("Digite uma palavra válida.");
-		}
 		for (var c=15; p!=a && c>0; c--) {
-			if (p.indexOf((a[0].toLowerCase))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
+			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[0]).toLowerCase == (a[0]).toLowerCase) {
+			if((p[0]).toLowerCase() == (a[0]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[1].toLowerCase))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
+			if (p.indexOf((a[1].toLowerCase()))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[1]).toLowerCase == (a[1]).toLowerCase) {
+			if((p[1]).toLowerCase() == (a[1]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[2].toLowerCase))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
+			if (p.indexOf((a[2].toLowerCase()))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[2]).toLowerCase == (a[2]).toLowerCase) {
+			if((p[2]).toLowerCase() == (a[2]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[3].toLowerCase))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
+			if (p.indexOf((a[3].toLowerCase()))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[3]).toLowerCase == (a[3]).toLowerCase) {
+			if((p[3]).toLowerCase() == (a[3]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[4].toLowerCase))!=-1 || p.indexOf((a[4].toUpperCase))!=-1) {
+			if (p.indexOf((a[4].toLowerCase()))!=-1 || p.indexOf((a[4].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[4]).toLowerCase == (a[4]).toLowerCase) {
+			if((p[4]).toLowerCase() == (a[4]).toLowerCase()) {
 				pos++;
 			}
-			if (p.indexOf((a[5].toLowerCase))!=-1 || p.indexOf((a[5].toUpperCase))!=-1) {
+			if (p.indexOf((a[5].toLowerCase()))!=-1 || p.indexOf((a[5].toUpperCase))!=-1) {
 				ac++;
 			}
-			if((p[5]).toLowerCase == (a[5]).toLowerCase) {
+			if((p[5]).toLowerCase() == (a[5]).toLowerCase()) {
 				pos++;
 			}
-			al+="\n"+p+"  "+ac+"      "+pos;
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 6 letras:");
-			ac=0, pos=0;
 			if (p.length>6) {
 				alert("Digite uma palavra válida.");
+			} else {
+				al+="\n"+p+"  "+ac+"      "+pos;
 			}
+			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 6 letras:");
+			ac=0, pos=0;
 		}
-		if (a.toLowerCase==p.toLowerCase) {
+		if (a.toLowerCase()==p.toLowerCase()) {
 			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
 				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
@@ -191,7 +186,7 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 			}
 		} else {
 			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
 				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
