@@ -10,11 +10,10 @@ while (xx=="sim" || xx=="SIM" || xx=="S" || xx=="s" || xx="ss" || xx=="SS") {
 		var ac=0, pos=0;
 		var p=prompt("Digite uma palavra de até 4 letras:");
 		var al="PAL.  AC.  POS.";
-		var c=10;
 		if (p.length>4) {
 			alert("Digite uma palavra válida.");
 		}
-		while (p!=a && c>0) {
+		while (var c=10; p!=a && c>0; c--) {
 			if (p.indexOf((a[0]))!=-1) {
 				ac++;
 			}
@@ -42,7 +41,6 @@ while (xx=="sim" || xx=="SIM" || xx=="S" || xx=="s" || xx="ss" || xx=="SS") {
 			al+="\n"+p+"  "+ac+"      "+pos;
 			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 4 letras:");
 			ac=0, pos=0;
-			c--;
 			if (p.length>4) {
 				alert("Digite uma palavra válida.");
 			}
@@ -74,11 +72,10 @@ while (xx=="sim" || xx=="SIM" || xx=="S" || xx=="s" || xx="ss" || xx=="SS") {
 		var ac=0, pos=0;
 		var p=prompt("Digite uma palavra de até 5 letras:");
 		var al="PAL.  AC.  POS.";
-		var c=15;
 		if (p.length>5) {
 			alert("Digite uma palavra válida.");
 		}
-		while (p!=a && c>0) {
+		while (var c=15; p!=a && c>0; c--;) {
 			if (p.indexOf((a[0]))!=-1) {
 				ac++;
 			}
@@ -112,7 +109,6 @@ while (xx=="sim" || xx=="SIM" || xx=="S" || xx=="s" || xx="ss" || xx=="SS") {
 			al+="\n"+p+"  "+ac+"      "+pos;
 			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 5 letras:");
 			ac=0, pos=0;
-			c--;
 			if (p.length>5) {
 				alert("Digite uma palavra válida.");
 			}
@@ -144,11 +140,10 @@ while (xx=="sim" || xx=="SIM" || xx=="S" || xx=="s" || xx="ss" || xx=="SS") {
 		var ac=0, pos=0;
 		var p=prompt("Digite uma palavra de até 6 letras:");
 		var al="PAL.  AC.  POS.";
-		var c=15;
 		if (p.length>6) {
 			alert("Digite uma palavra válida.");
 		}
-		while (p!=a && c>0) {
+		for (var c=15; p!=a && c>0; c--) {
 			if (p.indexOf((a[0]))!=-1) {
 				ac++;
 			}
@@ -188,7 +183,6 @@ while (xx=="sim" || xx=="SIM" || xx=="S" || xx=="s" || xx="ss" || xx=="SS") {
 			al+="\n"+p+"  "+ac+"      "+pos;
 			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 6 letras:");
 			ac=0, pos=0;
-			c--;
 			if (p.length>6) {
 				alert("Digite uma palavra válida.");
 			}
