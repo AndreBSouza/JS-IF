@@ -1,5 +1,5 @@
 var x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
-var xx="sim"
+var xx="sim";
 while (xx=="sim" || xx=="SIM" || xx=="S" || xx=="s" || xx="ss" || xx=="SS") {
 	if (x=="1" || x=="Fácil") {
 		var f="bola bolo faca vaca amor ódio meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato fada fato lata"
