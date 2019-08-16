@@ -1,4 +1,4 @@
-var x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
+var x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss"; ) {
 	if (x=="1" || x.toLowerCase=="Fácil".toLowerCase) {
 		var f="bola bolo faca vaca amor ódio meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato fada fato lata"
@@ -46,23 +46,22 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 		}
 		if (a.toLowerCase==p.toLowerCase) {
 			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx=="sim") {
-				x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
 			}
 		} else {
 			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx=="sim") {
-				x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
 			}
 		}
-	}
-	if (x=="2" || x.toLowerCase=="Médio".toLowerCase) {
+	} else if (x=="2" || x.toLowerCase=="Médio".toLowerCase) {
 		var m="porta carro matar falar jogar gasto vigor fator sagaz sutil plena nobre festa ganho caixa tarja preto carne carta fruta garfo lápis tinta fácil médio prato prata carga chave papel"
 		var a=m.substr((Math.floor(Math.random()*174)), 5);
 		while (a.indexOf(" ") != -1) {
@@ -114,23 +113,22 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 		}
 		if (a.toLowerCase==p.toLowerCase) {
 			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx=="sim") {
-				x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
 			}
 		} else {
 			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx=="sim") {
-				x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
 			}
 		}
-	}
-	if (x=="3" || x.toLowerCase=="Difícil".toLowerCase) {
+	} else if (x=="3" || x.toLowerCase=="Difícil".toLowerCase) {
 		var d="morrer faltar correr sentar contar mandar orelha ouvido mérito pressa legado exímio infame êxito casual alusão gentil ficção utopia sóbrio formal idiota eficaz hábito paixão ovelha exibir ciente cômico bélica"
 		var a=d.substr((Math.floor(Math.random()*202)), 6);
 		while (a.indexOf(" ") != -1) {
@@ -188,16 +186,16 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 		}
 		if (a.toLowerCase==p.toLowerCase) {
 			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx=="sim") {
-				x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
 			}
 		} else {
 			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx=="sim") {
-				x=prompt("Selecione o nível de dificuldade:\n\n1-Fácil\n2-Médio\n3-Difícil");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 				continue;
 			} else {
 				break;
