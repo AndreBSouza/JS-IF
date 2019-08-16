@@ -8,7 +8,71 @@ for (var xx="sim"; xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCas
 		}
 		var ac=0, pos=0;
 		var p=prompt("Digite uma palavra de até 4 letras:");
-	
+		var al="PAL.  AC.  POS.";
+		if (p.length>4) {
+			alert("Digite uma palavra válida.");
+		}
+		for (var c=10; p!=a && c>0; c--) {
+			if (p.indexOf((a[0].toLowerCase))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
+				ac++;
+			}
+			if((p[0]).toLowerCase == (a[0]).toLowerCase) {
+				pos++;
+			}
+			if (p.indexOf((a[1].toLowerCase))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
+				ac++;
+			}
+			if((p[1]).toLowerCase == (a[1]).toLowerCase) {
+				pos++;
+			}
+			if (p.indexOf((a[2].toLowerCase))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
+				ac++;
+			}
+			if((p[2]).toLowerCase == (a[2]).toLowerCase) {
+				pos++;
+			}
+			if (p.indexOf((a[3].toLowerCase))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
+				ac++;
+			}
+			if((p[3]).toLowerCase == (a[3]).toLowerCase) {
+				pos++;
+			}
+			al+="\n"+p+"  "+ac+"      "+pos;
+			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 4 letras:");
+			ac=0, pos=0;
+			if (p.length>4) {
+				alert("Digite uma palavra válida.");
+			}
+		}
+		if (a.toLowerCase==p.toLowerCase) {
+			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+				continue;
+			} else {
+				break;
+			}
+		} else {
+			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
+			if (xx.toLowerCase=="sim" || xx.toLowerCase=="s" || xx.toLowerCase="ss") {
+				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+				continue;
+			} else {
+				break;
+			}
+		}
+	} else if (x=="2" || x.toLowerCase=="Médio".toLowerCase) {
+		var m="porta carro matar falar jogar gasto vigor fator sagaz sutil plena nobre festa ganho caixa tarja preto carne carta fruta garfo lápis tinta fácil médio prato prata carga chave papel"
+		var a=m.substr((Math.floor(Math.random()*174)), 5);
+		while (a.indexOf(" ") != -1) {
+			a=m.substr((Math.floor(Math.random()*174)), 5);
+		}
+		var ac=0, pos=0;
+		var p=prompt("Digite uma palavra de até 5 letras:");
+		var al="PAL.  AC.  POS.";
+		if (p.length>5) {
+			alert("Digite uma palavra válida.");
+		}
 		for (var c=15; p!=a && c>0; c--;) {
 			if (p.indexOf((a[0].toLowerCase))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
 				ac++;
