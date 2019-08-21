@@ -9,7 +9,7 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 			var a=f.substr((Math.floor(Math.random()*146)), 4);
 		} while (a.indexOf(" ") != -1);
 		var ac=0, pos=0;
-		var p=prompt("Digite uma palavra de até 4 letras:");
+		var p=prompt("Digite uma palavra de 4 letras:");
 		var al="PAL.  AC.  POS.";
 		for (var c=10; p!=a && c>0; c--) {
 			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
@@ -56,7 +56,7 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 					alert("A letra na quarta posição é "+a[3]+".");
 				}
 			}
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 4 letras:");
+			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de 4 letras:");
 			ac=0, pos=0;
 		}
 		if (a.toLowerCase()==p.toLowerCase()) {
@@ -82,7 +82,7 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 			var a=m.substr((Math.floor(Math.random()*174)), 5);
 		} while (a.indexOf(" ") != -1);
 		var ac=0, pos=0;
-		var p=prompt("Digite uma palavra de até 5 letras:");
+		var p=prompt("Digite uma palavra de 5 letras:");
 		var al="PAL.  AC.  POS.";
 		for (var c=15; p!=a && c>0; c--) {
 			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
@@ -138,7 +138,7 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 					alert("A letra na quinta posição é "+a[4]+".");
 				}
 			}
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 5 letras:");
+			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de 5 letras:");
 			ac=0, pos=0;
 		}
 		if (a.toLowerCase()==p.toLowerCase()) {
@@ -164,7 +164,7 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 			var a=d.substr((Math.floor(Math.random()*202)), 6);
 		} while (a.indexOf(" ") != -1);
 		var ac=0, pos=0;
-		var p=prompt("Digite uma palavra de até 6 letras:");
+		var p=prompt("Digite uma palavra de 6 letras:");
 		var al="PAL.  AC.  POS.";
 		for (var c=15; p!=a && c>0; c--) {
 			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
@@ -229,7 +229,7 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 					alert("A letra na sexta posição é "+a[5]+".");
 				}
 			}
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 6 letras:");
+			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de 6 letras:");
 			ac=0, pos=0;
 		}
 		if (a.toLowerCase()==p.toLowerCase()) {
