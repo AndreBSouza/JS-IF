@@ -41,6 +41,21 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 			} else {
 				al+="\n"+p+"  "+ac+"      "+pos;
 			}
+			if (p=="dica") {
+				xxx=prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3 ou 4).")
+				if (xxx=="1") {
+					alert("A letra na primeira posição é "+a[0]+".");
+				}
+				if (xxx=="2") {
+					alert("A letra na segunda posição é "+a[1]+".");
+				}
+				if (xxx=="3") {
+					alert("A letra na terceira posição é "+a[2]+".");
+				}
+				if (xxx=="4") {
+					alert("A letra na quarta posição é "+a[3]+".");
+				}
+			}
 			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 4 letras:");
 			ac=0, pos=0;
 		}
@@ -104,6 +119,24 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 				alert("Digite uma palavra válida.");
 			}else {
 				al+="\n"+p+"  "+ac+"      "+pos;
+			}
+			if (p=="dica") {
+				xxx=prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4 ou 5).")
+				if (xxx=="1") {
+					alert("A letra na primeira posição é "+a[0]+".");
+				}
+				if (xxx=="2") {
+					alert("A letra na segunda posição é "+a[1]+".");
+				}
+				if (xxx=="3") {
+					alert("A letra na terceira posição é "+a[2]+".");
+				}
+				if (xxx=="4") {
+					alert("A letra na quarta posição é "+a[3]+".");
+				}
+				if (xxx=="5") {
+					alert("A letra na quinta posição é "+a[4]+".");
+				}
 			}
 			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 5 letras:");
 			ac=0, pos=0;
@@ -174,6 +207,27 @@ while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss
 				alert("Digite uma palavra válida.");
 			} else {
 				al+="\n"+p+"  "+ac+"      "+pos;
+			}
+			if (p=="dica") {
+				xxx=prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4, 5 ou 6).")
+				if (xxx=="1") {
+					alert("A letra na primeira posição é "+a[0]+".");
+				}
+				if (xxx=="2") {
+					alert("A letra na segunda posição é "+a[1]+".");
+				}
+				if (xxx=="3") {
+					alert("A letra na terceira posição é "+a[2]+".");
+				}
+				if (xxx=="4") {
+					alert("A letra na quarta posição é "+a[3]+".");
+				}
+				if (xxx=="5") {
+					alert("A letra na quinta posição é "+a[4]+".");
+				}
+				if (xxx=="6") {
+					alert("A letra na sexta posição é "+a[5]+".");
+				}
 			}
 			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de até 6 letras:");
 			ac=0, pos=0;
