@@ -13,10 +13,6 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         var p = prompt("Digite uma palavra de 4 letras:");
         var al = "PAL.  AC.  POS.";
         for (var c = 10; p != a && c > 0; c--) {
-            if (p == "dica") {
-                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3 ou 4).")
-                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
-            }
             if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1) && p!="dica") {
                 ac++;
             }
@@ -40,6 +36,10 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
             }
             if (((p[3]).toLowerCase() == (a[3]).toLowerCase()) && p != "dica") {
                 pos++;
+            }
+            if (p == "dica") {
+                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3 ou 4).")
+                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
             }
             if (p.length != 4) {
                 alert("Digite uma palavra válida.");
@@ -76,10 +76,6 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         var p = prompt("Digite uma palavra de 5 letras:");
         var al = "PAL.  AC.  POS.";
         for (var c = 15; p != a && c > 0; c--) {
-            if (p == "dica") {
-                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4 ou 5).")
-                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
-            }
             if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1) && p!="dica") {
                 ac++;
             }
@@ -109,6 +105,10 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
             }
             if (((p[4]).toLowerCase() == (a[4]).toLowerCase()) && p != "dica") {
                 pos++;
+            }
+            if (p == "dica") {
+                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4 ou 5).")
+                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
             }
             if (p.length != 5) {
                 alert("Digite uma palavra válida.");
@@ -145,10 +145,6 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         var p = prompt("Digite uma palavra de 6 letras:");
         var al = "PAL.  AC.  POS.";
         for (var c = 15; p != a && c > 0; c--) {
-            if (p == "dica") {
-                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4, 5 ou 6).")
-                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
-            }
             if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1) && p!="dica") {
                 ac++;
             }
@@ -184,6 +180,10 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
             }
             if (((p[5]).toLowerCase() == (a[5]).toLowerCase()) && p != "dica") {
                 pos++;
+            }
+            if (p == "dica") {
+                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4, 5 ou 6).")
+                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
             }
             if (p.length != 4) {
                 alert("Digite uma palavra válida.");
