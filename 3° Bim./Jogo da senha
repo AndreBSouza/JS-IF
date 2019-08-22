@@ -1,254 +1,218 @@
 alert("Olá, vamos jogar senha?\nVou te mostrar como jogar.");
 alert("1 - O jogo (perdi) consiste em uma palavra gerada de forma 'aleatória' que deve ser 'adivinhada' pelo jogador, no caso, você.\n2 - A cada rodada irei te pedir uma nova palavra, para você tentar acertar a palavra sorteada.\n3 - Há três níveis de dificuldade no jogo, o nível fácil (a senha terá quatro letras e você terá dez tentativas para acertá-la), o nível médio (a senha terá cinco letras e você terá quinze tentativas para acertá-la) e o nível difícil (a senha terá seis letras e você terá quinze tentativas para acertá-la).\n4 - Após cada jogada sua eu irei te mostrar a palavra que você digitou (PAL.), quantas letras você acertou (AC.) e quantas letras estão na posição certa (POS.).\n6 - Você pode pedir pedir dicas ao longo do jogo, toda vez que digitar a palavra 'dica' eu lhe darei as opções de dicas para você.\n7 - Espero que goste do jogo e se divirta!");
-var x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-var xx="sim";
-while (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss" || xx.toLowerCase()=="yup" || xx.toLowerCase()=="yes" || xx.toLowerCase()=="arra" || xx.toLowerCase()=="ãrrã" || xx.toLowerCase()=="arrã" || xx.toLowerCase()=="obv") {
-	if (x=="1" || x.toLowerCase()=="Fácil".toLowerCase()) {
-		var f="bola bolo faca vaca amor ódio meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato fada fato lata"
-		do {
-			var a=f.substr((Math.floor(Math.random()*146)), 4);
-		} while (a.indexOf(" ") != -1);
-		var ac=0, pos=0;
-		var p=prompt("Digite uma palavra de 4 letras:");
-		var al="PAL.  AC.  POS.";
-		for (var c=10; p!=a && c>0; c--) {
-			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[0]).toLowerCase() == (a[0]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[1].toLowerCase()))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[1]).toLowerCase() == (a[1]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[2].toLowerCase()))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[2]).toLowerCase() == (a[2]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[3].toLowerCase()))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[3]).toLowerCase() == (a[3]).toLowerCase()) {
-				pos++;
-			}
-			if (p.length>4) {
-				alert("Digite uma palavra válida.");
-			} else {
-				al+="\n"+p+"  "+ac+"      "+pos;
-			}
-			if (p=="dica") {
-				xxx=prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3 ou 4).")
-				if (xxx=="1") {
-					alert("A letra na primeira posição é "+a[0]+".");
-				}
-				if (xxx=="2") {
-					alert("A letra na segunda posição é "+a[1]+".");
-				}
-				if (xxx=="3") {
-					alert("A letra na terceira posição é "+a[2]+".");
-				}
-				if (xxx=="4") {
-					alert("A letra na quarta posição é "+a[3]+".");
-				}
-			}
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de 4 letras:");
-			ac=0, pos=0;
-		}
-		if (a.toLowerCase()==p.toLowerCase()) {
-			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
-				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-				continue;
-			} else {
-				break;
-			}
-		} else {
-			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
-				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-				continue;
-			} else {
-				break;
-			}
-		}
-	} else if (x=="2" || x.toLowerCase()=="Médio".toLowerCase()) {
-		var m="porta carro matar falar jogar gasto vigor fator sagaz sutil plena nobre festa ganho caixa tarja preto carne carta fruta garfo lápis tinta fácil médio prato prata carga chave papel"
-		do {
-			var a=m.substr((Math.floor(Math.random()*174)), 5);
-		} while (a.indexOf(" ") != -1);
-		var ac=0, pos=0;
-		var p=prompt("Digite uma palavra de 5 letras:");
-		var al="PAL.  AC.  POS.";
-		for (var c=15; p!=a && c>0; c--) {
-			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[0]).toLowerCase() == (a[0]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[1].toLowerCase()))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[1]).toLowerCase() == (a[1]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[2].toLowerCase()))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[2]).toLowerCase() == (a[2]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[3].toLowerCase()))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[3]).toLowerCase() == (a[3]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[4].toLowerCase()))!=-1 || p.indexOf((a[4].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[4]).toLowerCase() == (a[4]).toLowerCase()) {
-				pos++;
-			}
-			if (p.length>5) {
-				alert("Digite uma palavra válida.");
-			}else {
-				al+="\n"+p+"  "+ac+"      "+pos;
-			}
-			if (p=="dica") {
-				xxx=prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4 ou 5).")
-				if (xxx=="1") {
-					alert("A letra na primeira posição é "+a[0]+".");
-				}
-				if (xxx=="2") {
-					alert("A letra na segunda posição é "+a[1]+".");
-				}
-				if (xxx=="3") {
-					alert("A letra na terceira posição é "+a[2]+".");
-				}
-				if (xxx=="4") {
-					alert("A letra na quarta posição é "+a[3]+".");
-				}
-				if (xxx=="5") {
-					alert("A letra na quinta posição é "+a[4]+".");
-				}
-			}
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de 5 letras:");
-			ac=0, pos=0;
-		}
-		if (a.toLowerCase()==p.toLowerCase()) {
-			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
-				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-				continue;
-			} else {
-				break;
-			}
-		} else {
-			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
-				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-				continue;
-			} else {
-				break;
-			}
-		}
-	} else if (x=="3" || x.toLowerCase()=="Difícil".toLowerCase()) {
-		var d="morrer faltar correr sentar contar mandar orelha ouvido mérito pressa legado exímio infame êxito casual alusão gentil ficção utopia sóbrio formal idiota eficaz hábito paixão ovelha exibir ciente cômico bélica"
-		do { 
-			var a=d.substr((Math.floor(Math.random()*202)), 6);
-		} while (a.indexOf(" ") != -1);
-		var ac=0, pos=0;
-		var p=prompt("Digite uma palavra de 6 letras:");
-		var al="PAL.  AC.  POS.";
-		for (var c=15; p!=a && c>0; c--) {
-			if (p.indexOf((a[0].toLowerCase()))!=-1 || p.indexOf((a[0].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[0]).toLowerCase() == (a[0]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[1].toLowerCase()))!=-1 || p.indexOf((a[1].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[1]).toLowerCase() == (a[1]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[2].toLowerCase()))!=-1 || p.indexOf((a[2].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[2]).toLowerCase() == (a[2]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[3].toLowerCase()))!=-1 || p.indexOf((a[3].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[3]).toLowerCase() == (a[3]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[4].toLowerCase()))!=-1 || p.indexOf((a[4].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[4]).toLowerCase() == (a[4]).toLowerCase()) {
-				pos++;
-			}
-			if (p.indexOf((a[5].toLowerCase()))!=-1 || p.indexOf((a[5].toUpperCase))!=-1) {
-				ac++;
-			}
-			if((p[5]).toLowerCase() == (a[5]).toLowerCase()) {
-				pos++;
-			}
-			if (p.length>6) {
-				alert("Digite uma palavra válida.");
-			} else {
-				al+="\n"+p+"  "+ac+"      "+pos;
-			}
-			if (p=="dica") {
-				xxx=prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4, 5 ou 6).")
-				if (xxx=="1") {
-					alert("A letra na primeira posição é "+a[0]+".");
-				}
-				if (xxx=="2") {
-					alert("A letra na segunda posição é "+a[1]+".");
-				}
-				if (xxx=="3") {
-					alert("A letra na terceira posição é "+a[2]+".");
-				}
-				if (xxx=="4") {
-					alert("A letra na quarta posição é "+a[3]+".");
-				}
-				if (xxx=="5") {
-					alert("A letra na quinta posição é "+a[4]+".");
-				}
-				if (xxx=="6") {
-					alert("A letra na sexta posição é "+a[5]+".");
-				}
-			}
-			p=prompt(al+"\nVocê tem "+c+" tentativas restantes.\n-Digite outra palavra de 6 letras:");
-			ac=0, pos=0;
-		}
-		if (a.toLowerCase()==p.toLowerCase()) {
-			xx=prompt("Parabéns! Você acertou!\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
-				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-				continue;
-			} else {
-				break;
-			}
-		} else {
-			xx=prompt("Você ultrapassou o limite de tentativas.\nA palavra era "+a+".\nDeseja jogar novamente?");
-			if (xx.toLowerCase()=="sim" || xx.toLowerCase()=="s" || xx.toLowerCase()=="ss") {
-				x=prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
-				continue;
-			} else {
-				break;
-			}
-		}
-	}
+var x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+var xx = "sim";
+while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+    if (x == "1" || x.toLowerCase() == "Fácil".toLowerCase() || x.toLowerCase() == "facil") {
+        var f = "bola bolo faca vaca amor ódio meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato fada fato lata"
+        do {
+            var a = f.substr((Math.floor(Math.random() * 146)), 4);
+        } while (a.indexOf(" ") != -1);
+        var ac = 0,
+            pos = 0;
+        var p = prompt("Digite uma palavra de 4 letras:");
+        var al = "PAL.  AC.  POS.";
+        for (var c = 10; p != a && c > 0; c--) {
+            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1)) {
+                ac++;
+            }
+            if (((p[0]).toLowerCase() == (a[0]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[1]).toLowerCase() == (a[1]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[2]).toLowerCase() == (a[2]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[3]).toLowerCase() == (a[3]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if (p.length != 4) {
+                alert("Digite uma palavra válida.");
+            } else if (p != "dica") {
+                al += "\n" + p + "  " + ac + "      " + pos;
+            }
+            if (p == "dica") {
+                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3 ou 4).")
+                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]
+                    ".");
+            }
+            p = prompt(al + "\nVocê tem " + c + " tentativas restantes.\n-Digite outra palavra de 4 letras:");
+            ac = 0, pos = 0;
+        }
+        if (a.toLowerCase() == p.toLowerCase()) {
+            xx = prompt("Parabéns! Você acertou!\nA palavra era " + a + ".\nDeseja jogar novamente?");
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+        } else {
+            xx = prompt("Você ultrapassou o limite de tentativas.\nA palavra era " + a + ".\nDeseja jogar novamente?");
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+        }
+    } else if (x == "2" || x.toLowerCase() == "Médio".toLowerCase() || x.toLowerCase() == "medio") {
+        var m = "porta carro matar falar jogar gasto vigor fator sagaz sutil plena nobre festa ganho caixa tarja preto carne carta fruta garfo lápis tinta fácil médio prato prata carga chave papel"
+        do {
+            var a = m.substr((Math.floor(Math.random() * 174)), 5);
+        } while (a.indexOf(" ") != -1);
+        var ac = 0,
+            pos = 0;
+        var p = prompt("Digite uma palavra de 5 letras:");
+        var al = "PAL.  AC.  POS.";
+        for (var c = 15; p != a && c > 0; c--) {
+            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1)) {
+                ac++;
+            }
+            if (((p[0]).toLowerCase() == (a[0]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[1]).toLowerCase() == (a[1]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[2]).toLowerCase() == (a[2]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[3]).toLowerCase() == (a[3]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[4].toLowerCase())) != -1 || p.indexOf((a[4].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[4]).toLowerCase() == (a[4]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if (p.length != 5) {
+                alert("Digite uma palavra válida.");
+            } else if (p != "dica") {
+                al += "\n" + p + "  " + ac + "      " + pos;
+            }
+            if (p == "dica") {
+                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4 ou 5).")
+                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]
+                    ".");
+            }
+            p = prompt(al + "\nVocê tem " + c + " tentativas restantes.\n-Digite outra palavra de 5 letras:");
+            ac = 0, pos = 0;
+        }
+        if (a.toLowerCase() == p.toLowerCase()) {
+            xx = prompt("Parabéns! Você acertou!\nA palavra era " + a + ".\nDeseja jogar novamente?");
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+        } else {
+            xx = prompt("Você ultrapassou o limite de tentativas.\nA palavra era " + a + ".\nDeseja jogar novamente?");
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+        }
+    } else if (x == "3" || x.toLowerCase() == "Difícil".toLowerCase() || x.toLowerCase() == "dificil") {
+        var d = "morrer faltar correr sentar contar mandar orelha ouvido mérito pressa legado exímio infame êxito casual alusão gentil ficção utopia sóbrio formal idiota eficaz hábito paixão ovelha exibir ciente cômico bélica"
+        do {
+            var a = d.substr((Math.floor(Math.random() * 202)), 6);
+        } while (a.indexOf(" ") != -1);
+        var ac = 0,
+            pos = 0;
+        var p = prompt("Digite uma palavra de 6 letras:");
+        var al = "PAL.  AC.  POS.";
+        for (var c = 15; p != a && c > 0; c--) {
+            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1)) {
+                ac++;
+            }
+            if (((p[0]).toLowerCase() == (a[0]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[1]).toLowerCase() == (a[1]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[2]).toLowerCase() == (a[2]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[3]).toLowerCase() == (a[3]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[4].toLowerCase())) != -1 || p.indexOf((a[4].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[4]).toLowerCase() == (a[4]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if ((p.indexOf((a[5].toLowerCase())) != -1 || p.indexOf((a[5].toUpperCase)) != -1) && p != "dica") {
+                ac++;
+            }
+            if (((p[5]).toLowerCase() == (a[5]).toLowerCase()) && p != "dica") {
+                pos++;
+            }
+            if (p.length != 4) {
+                alert("Digite uma palavra válida.");
+            } else if (p != "dica") {
+                al += "\n" + p + "  " + ac + "      " + pos;
+            }
+            if (p == "dica") {
+                xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4, 5 ou 6).")
+                alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]
+                    ".");
+            }
+            p = prompt(al + "\nVocê tem " + c + " tentativas restantes.\n-Digite outra palavra de 6 letras:");
+            ac = 0, pos = 0;
+        }
+        if (a.toLowerCase() == p.toLowerCase()) {
+            xx = prompt("Parabéns! Você acertou!\nA palavra era " + a + ".\nDeseja jogar novamente?");
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+        } else {
+            xx = prompt("Você ultrapassou o limite de tentativas.\nA palavra era " + a + ".\nDeseja jogar novamente?");
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+        }
+    }
 }
 alert("Tchau!");
