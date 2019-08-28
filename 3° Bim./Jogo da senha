@@ -1,8 +1,8 @@
 alert("Olá, vamos jogar senha?\nVou te mostrar como jogar.");
-alert("1 - O jogo (perdi) consiste em uma palavra gerada de forma 'aleatória' que deve ser 'adivinhada' pelo jogador, no caso, você.\n2 - A cada rodada irei te pedir uma nova palavra, para você tentar acertar a palavra sorteada.\n3 - Há três níveis de dificuldade no jogo, o nível fácil (a senha terá quatro letras e você terá dez tentativas para acertá-la), o nível médio (a senha terá cinco letras e você terá quinze tentativas para acertá-la) e o nível difícil (a senha terá seis letras e você terá quinze tentativas para acertá-la).\n4 - Após cada jogada sua eu irei te mostrar a palavra que você digitou (PAL.), quantas letras você acertou (AC.) e quantas letras estão na posição certa (POS.).\n5 - Você pode pedir pedir dicas ao longo do jogo, toda vez que digitar a palavra 'dica' eu lhe darei as opções de dicas para você.\n6 - Acentos são levados em consideração para conferir a palavra.\nEspero que goste do jogo e se divirta!");
+alert("1 - O jogo (perdi) consiste em uma palavra gerada de forma 'aleatória' que deve ser 'adivinhada' pelo jogador, no caso, você.\n2 - A cada rodada irei te pedir uma nova palavra, para você tentar acertar a palavra sorteada.\n3 - Há três níveis de dificuldade no jogo, o nível fácil (a senha terá quatro letras e você terá dez tentativas para acertá-la), o nível médio (a senha terá cinco letras e você terá quinze tentativas para acertá-la) e o nível difícil (a senha terá seis letras e você terá quinze tentativas para acertá-la).\n4 - Após cada jogada sua eu irei te mostrar a palavra que você digitou (PAL.), quantas letras você acertou (AC.) e quantas letras estão na posição certa (POS.).\n5 - Você pode pedir pedir dicas ao longo do jogo, toda vez que digitar a palavra 'dica' eu lhe darei as opções de dicas para você.\n6 - Acentos são levados em consideração para conferir a palavra.\n7 - Você pode sair/reiniciar do jogo se não digitar alguma palavra e teclar ENTER.\nEspero que goste do jogo e se divirta!");
 var x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
 var xx = "sim";
-while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
     if (x == "1" || x.toLowerCase() == "Fácil".toLowerCase() || x.toLowerCase() == "facil") {
         var f = "bola bolo faca vaca amor ódio meta galo gado liga copa taça data rede sala jogo pote auge aula mais foca lobo gato pato pata foco tato fada fato lata"
         do {
@@ -11,26 +11,26 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         var ac = 0, pos = 0;
         var p = prompt("Digite uma palavra de 4 letras:");
         var al = "PAL.  AC.  POS.";
-        for (var c = 10; p != a && c > 0; c--) {
-            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1) && p!="dica") {
+        for (var c = 10; p != a && c > 0 && p != null; c--) {
+            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase())) != -1) && p!="dica") {
                 ac++;
             }
             if (((p[0]).toLowerCase() == (a[0]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[1]).toLowerCase() == (a[1]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[2]).toLowerCase() == (a[2]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[3]).toLowerCase() == (a[3]).toLowerCase()) && p != "dica") {
@@ -50,15 +50,23 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         }
         if (a.toLowerCase() == p.toLowerCase()) {
             xx = prompt("Parabéns! Você acertou!\nA palavra era " + a + ".\nDeseja jogar novamente?");
-            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
                 x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
                 continue;
             } else {
                 break;
             }
-        } else {
+        } else if (p==null) {
+			xx = prompt("Você quer continuar jogando?");
+			if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+		} else {
             xx = prompt("Você ultrapassou o limite de tentativas.\nA palavra era " + a + ".\nDeseja jogar novamente?");
-            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
                 x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
                 continue;
             } else {
@@ -72,39 +80,42 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         } while (a.indexOf(" ") != -1);
         var ac = 0, pos = 0;
         var p = prompt("Digite uma palavra de 5 letras:");
-        var al = "PAL.  AC.  POS.";
-        for (var c = 15; p != a && c > 0; c--) {
-            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1) && p!="dica") {
+        var al = "PAL.   AC.  POS.";
+        for (var c = 15; p != a && c > 0 && p != null; c--) {
+			if (p=="dica") {
+				p+="-";
+			}
+            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase())) != -1) && p!="dica") {
                 ac++;
             }
             if (((p[0]).toLowerCase() == (a[0]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[1]).toLowerCase() == (a[1]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[2]).toLowerCase() == (a[2]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[3]).toLowerCase() == (a[3]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[4].toLowerCase())) != -1 || p.indexOf((a[4].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[4].toLowerCase())) != -1 || p.indexOf((a[4].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[4]).toLowerCase() == (a[4]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if (p == "dica") {
+            if (p == "dica-") {
                 xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4 ou 5).")
                 alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
             }
@@ -118,15 +129,23 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         }
         if (a.toLowerCase() == p.toLowerCase()) {
             xx = prompt("Parabéns! Você acertou!\nA palavra era " + a + ".\nDeseja jogar novamente?");
-            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
                 x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
                 continue;
             } else {
                 break;
             }
-        } else {
+        } else if (p==null) {
+			xx = prompt("Você quer continuar jogando?");
+			if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+		} else {
             xx = prompt("Você ultrapassou o limite de tentativas.\nA palavra era " + a + ".\nDeseja jogar novamente?");
-            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
                 x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
                 continue;
             } else {
@@ -140,49 +159,52 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         } while (a.indexOf(" ") != -1);
         var ac = 0, pos = 0;
         var p = prompt("Digite uma palavra de 6 letras:");
-        var al = "PAL.  AC.  POS.";
-        for (var c = 15; p != a && c > 0; c--) {
-            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase)) != -1) && p!="dica") {
+        var al = "PAL.    AC.  POS.";
+        for (var c = 15; p != a && c > 0 && p != null; c--) {
+			if (p=="dica") {
+				p+="--";
+			}
+            if ((p.indexOf((a[0].toLowerCase())) != -1 || p.indexOf((a[0].toUpperCase())) != -1) && p!="dica") {
                 ac++;
             }
             if (((p[0]).toLowerCase() == (a[0]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[1].toLowerCase())) != -1 || p.indexOf((a[1].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[1]).toLowerCase() == (a[1]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[2].toLowerCase())) != -1 || p.indexOf((a[2].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[2]).toLowerCase() == (a[2]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[3].toLowerCase())) != -1 || p.indexOf((a[3].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[3]).toLowerCase() == (a[3]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[4].toLowerCase())) != -1 || p.indexOf((a[4].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[4].toLowerCase())) != -1 || p.indexOf((a[4].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[4]).toLowerCase() == (a[4]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if ((p.indexOf((a[5].toLowerCase())) != -1 || p.indexOf((a[5].toUpperCase)) != -1) && p != "dica") {
+            if ((p.indexOf((a[5].toLowerCase())) != -1 || p.indexOf((a[5].toUpperCase())) != -1) && p != "dica") {
                 ac++;
             }
             if (((p[5]).toLowerCase() == (a[5]).toLowerCase()) && p != "dica") {
                 pos++;
             }
-            if (p == "dica") {
+            if (p == "dica--") {
                 xxx = prompt("Qual letra você quer que seja revelada?\nDigite a sua posição (1, 2, 3, 4, 5 ou 6).")
                 alert("A letra na " + xxx + "° posição é " + a[(xxx - 1)]+".");
             }
-            if (p.length != 4) {
+            if (p.length != 6) {
                 alert("Digite uma palavra válida.");
             } else if (p != "dica") {
                 al += "\n" + p + "  " + ac + "      " + pos;
@@ -192,15 +214,23 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         }
         if (a.toLowerCase() == p.toLowerCase()) {
             xx = prompt("Parabéns! Você acertou!\nA palavra era " + a + ".\nDeseja jogar novamente?");
-            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
                 x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
                 continue;
             } else {
                 break;
             }
-        } else {
+        } else if (p==null) {
+			xx = prompt("Você quer continuar jogando?");
+			if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
+                x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
+                continue;
+            } else {
+                break;
+            }
+		} else {
             xx = prompt("Você ultrapassou o limite de tentativas.\nA palavra era " + a + ".\nDeseja jogar novamente?");
-            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz") {
+            if (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
                 x = prompt("Selecione o nível de dificuldade:\n1-Fácil\n2-Médio\n3-Difícil");
                 continue;
             } else {
@@ -211,7 +241,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
 }
 var xxxx=prompt("Como você avaliaria meu jogo?\n0/2 - me não gostei\n1/2 - legalzin\n2/2 - mt bom gostei prbns");
 if (xxxx=="2/2" || xxxx=="2") {
-	alert("Que bom! Espero que tenha se divertido!\nSerase vale os 2 pontos Rapel?");
+	alert("Que bom! Espero que tenha se divertido!\nSerase vale os 2 pontos Raquel?");
 } else if (xxxx=="1/2" || xxxx=="1") {
 	alert("Putz, queria que você tivesse gostado ;-;!");
 } else if (xxxx=="0/2" || xxxx=="0") {
