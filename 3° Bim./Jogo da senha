@@ -46,6 +46,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
                 } else {
                     alert("Você não pode mais usar dicas, pois ultrapassou o limite.");
                 }
+				c++;
             }
             if (p.length != 4) {
                 alert("Digite uma palavra válida.");
@@ -131,6 +132,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
                 } else {
                     alert("Você não pode mais usar dicas, pois ultrapassou o limite.");
                 }
+				c++;
             }
             if (p.length != 5) {
                 alert("Digite uma palavra válida.");
@@ -222,6 +224,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
                 } else {
                     alert("Você não pode mais usar dicas, pois ultrapassou o limite.");
                 }
+				c++;
             }
             if (p.length != 6) {
                 alert("Digite uma palavra válida.");
