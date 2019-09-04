@@ -1,0 +1,3 @@
+var rn=prompt("Digite um número em algarismos romanos:");
+var ia=0;
+while (rn.indexOf("IIII") {
