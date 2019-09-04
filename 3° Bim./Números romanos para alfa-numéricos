@@ -1,29 +1,29 @@
-var rn=prompt("Digite um número em algarismos romanos:").toUpperCase();
+var nr=prompt("Digite um número em algarismos romanos:").toUpperCase();
 var ia=0;
-if (rn.indexOf("I") != -1 && rn.indexOf("IV") == -1 && rn.indexOf("IX") == -1) {
+if (nr.indexOf("I") != -1 && nr.indexOf("IV") == -1 && nr.indexOf("IX") == -1) {
     ia+=1;
-} else if (rn.indexOf("IX") != -1) {
+} else if (nr.indexOf("IX") != -1) {
     ia+=9;
-} if (rn.indexOf("V") != -1 && rn.indexOf("IV") == -1) {
+} if (nr.indexOf("V") != -1 && nr.indexOf("IV") == -1) {
     ia+=5;
-} else if (rn.indexOf("IV") != -1) {
+} else if (nr.indexOf("IV") != -1) {
     ia+=4;
-} if (rn.indexOf("X") != -1 && rn.indexOf("XL") == -1 && rn.indexOf("XC") == -1) {
+} if (nr.indexOf("X") != -1 && nr.indexOf("XL") == -1 && nr.indexOf("XC") == -1) {
     ia+=10;
-} else if (rn.indexOf("XL") != -1) {
+} else if (nr.indexOf("XL") != -1) {
     ia+=40;
-} else if (rn.indexOf("XC") != -1) {
+} else if (nr.indexOf("XC") != -1) {
     ia+=90;
 } 
-if (rn.indexOf("L") != -1 && rn.indexOf("XL") == -1) {
+if (nr.indexOf("L") != -1 && nr.indexOf("XL") == -1) {
     ia+=50;
-} if (rn.indexOf("C") != -1 && rn.indexOf("XC") == -1) {
+} if (nr.indexOf("C") != -1 && nr.indexOf("XC") == -1) {
     ia+=100;
 }
-alert(rn+" em algarismos indo-arábicos é "+ia);
+alert(nr+" em algarismos indo-arábicos é "+ia);
 
 
 
 
 
-while (rn.indexOf("IIII") == -1 && rn.indexOf("VV") == -1 && rn.indexOf("") == -1 &&) {
+while (nr.indexOf("IIII") == -1 && nr.indexOf("VV") == -1 && nr.indexOf("") == -1 &&) {
