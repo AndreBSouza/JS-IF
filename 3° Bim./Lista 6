@@ -9,3 +9,131 @@ for (c=N-1; c>=0; c--) {
     v[c]=prompt("Digite um número:");
 }
 alert(v);
+
+
+
+/*
+2.
+Leia a pontuação de N times de um campeonato de futebol.
+O programa deve mostrar, ao final, qual a pontuação dos campeões, bem como mostrar quantos times dividiram o título.
+*/
+
+var N=Number(prompt("Digite quantos times estão no campeonato: ")), v=[], ma=0, qc=0;
+for (c=0; c<N; c++) {
+    v[c]=Number(prompt("Digite a pontuação do time:"));
+    if (c=0) {
+        ma=v[c];
+    }
+    if (v[c]>ma) {
+        ma=v[c];
+    }
+}
+c=N-1;
+while (c>=0) {
+    if (v[c]==ma) {
+        qc++;
+    }
+    c--;
+}
+alert("Os "+qc+" campeões fizeram "+ma+" pontos.");
+
+
+
+/*
+3.
+Peça ao usuário 10 números, calcule e mostre a média desses 10 números e mostre ainda quantos, desses números, são maiores que a média.
+*/
+
+var v=[], s=0, qacm=0;
+for (c=0; c<10; c++) {
+    v[c]=Number(prompt("Digite um número:"));
+    s+=v[c];
+}
+for (c=0; c<10; c++) {
+	if (v[c]>s/10) {
+		qacm++;
+	}
+}
+alert("A média dos dez números é: "+s/10".\n"+qacm+" números estão acima da média.");
+
+
+
+/*
+4.
+Leia um vetor com dez números reais, calcule e mostre a quantidade de números negativos e a soma dos números positivos desse vetor.
+*/
+
+var  v=[], qn=0, sp=0;
+for (c=0; c<10; c++) {
+    v[c]=Number(prompt("Digite um número:"));
+    if (v[c]<0) {
+        qn++;
+    } if (v[c]>0) {
+        s+=v[c];
+    }
+}
+alert("A quantidade de números negativos: "+qn+".\nA soma dos positivos: "+sp+".");
+
+
+
+/*
+5.
+Leia um vetor com 15 posições, calcule e mostre:
+a) O maior elemento do vetor e em que posição esse elemento se encontra;
+b) O menor elemento do vetor e em que posição esse elemento se encontra.
+*/
+
+var v=[], ma=0, me=0, pme=0, pma=0, c=0;
+while (c<15) {
+    v[c]=Number(prompt("Digite um número:"));
+    if (c==0) {
+        ma=v[c];
+        me=v[c];
+    }
+    if (v[c]>ma) {
+        ma=v[c];
+        pma=c;
+    } if (v[c]<me) {
+        me=v[c];
+        pme=c;
+    }
+	c++;
+}
+alert("O maior elemento, "+ma+" está na posição "+pma+".\nO menor elemento, "+me+" está na posição "+pme+".");
+
+
+
+/*
+6.
+Leia 2 vetores de 10 posições e some os elementos de mesma posição e armazene o resultado em um terceiro vetor (também de 10 posições).
+*/
+
+var v1=[], v2=[], v3=[];
+for (c=0; c<10; c++) {
+	v1[c]=Number(prompt("Digite um número para o primeiro vetor:"));
+}
+for (c=0; c<10; c++) {
+	v2[c]=Number(prompt("Digite um número para o segundo vetor:"));
+}
+for (c=0; c<10; c++) {
+	v3[c]=v1[c]+v2[c];
+}
+alert(v3);
+
+
+
+/*
+7.
+Leia um vetor de 20 posições e uma variável A.
+A seguir, armazene em um outro vetor o produto
+da variável A pelo primeiro vetor.
+*/
+
+var v1=[], A=Number(prompt("Digite A:")), v2=[];
+for (c=0; c<20; c++) {
+	v1[c]=Number(prompt("Digite um número:"));
+}
+for (c=0; c<20; c++) {
+	v2[c]=v1[c]*A;
+}
+alert(v2);
