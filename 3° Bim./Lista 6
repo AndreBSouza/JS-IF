@@ -1,0 +1,11 @@
+/*
+1.
+Leia uma sequência de N números inteiros e mostre essa sequência ao contrário, no final de sua execução.
+O valor de N deve ser informado pelo usuário.
+*/
+
+var N=Number(prompt("Digite o limite:")), v=[];
+for (c=N-1; c>=0; c--) {
+    v[c]=prompt("Digite um número:");
+}
+alert(v);
