@@ -36,7 +36,7 @@ for (c=0; c<l; c++) {
 }
 v3=v1.concat(v2);
 for (i=0; i<v3.length; i++) {
-	if (v3.indexOf(v3[i], i)!=-1) {
+	if (v3.indexOf(v3[i], (i-1))!=-1) {
 		v3.splice((i-1),1);
 	}
 }
