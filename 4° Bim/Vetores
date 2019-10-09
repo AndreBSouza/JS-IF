@@ -29,8 +29,10 @@ alert(r.join(" "));
 
 var l=Number(prompt("Digite o tamanho dos vetores:")), v1=[], v2=[], dif=[], v3=[];
 for (c=0; c<l; c++) {
-	v1[c]=prompt("Digite um número para o primeiro vetor: ");
-	v2[c]=prompt("Digite um número para o segundo vetor:");
+	v1[c]=Number(prompt("Digite um número para o primeiro vetor: "));
+}
+for (c=0; c<l; c++) {
+	v2[c]=Number(prompt("Digite um número para o segundo vetor:"));
 }
 v3=v1.concat(v2);
 for (i=0; i<v3.length; i++) {
