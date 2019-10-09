@@ -29,10 +29,10 @@ alert(r.join(" "));
 
 var l=Number(prompt("Digite o tamanho dos vetores:")), v1=[], v2=[], dif=[], v3=[], v4=[];
 for (c=0; c<l; c++) {
-	v1[c]=Number(prompt("Digite um número para o primeiro vetor: "));
+	v1[c]=Number(prompt("Digite um número para o vetor A: "));
 }
 for (c=0; c<l; c++) {
-	v2[c]=Number(prompt("Digite um número para o segundo vetor:"));
+	v2[c]=Number(prompt("Digite um número para o vetor B:"));
 }
 v3=v1.concat(v2);
 for (i=0; i<v3.length; i++) {
@@ -50,4 +50,4 @@ for (c=0; c<v1.length; c++) {
 		dif[c]=v1[c];
 	}
 }
-alert("A união entre os vetores: "+v3.join(", ")+"\nA intersecção entre os vetores: "+v4.join(", ")+"\nA diferença entre os vetores: "+dif.join(", "));
+alert("A U B = "+v3.join(", ")+"\nA inter B = "+v4.join(", ")+"\nA \ B = "+dif.join(", "));
