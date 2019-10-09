@@ -27,14 +27,20 @@ alert(r.join(" "));
 
 
 
-var l=Number(prompt("Digite o tamanho dos vetores:")), v1=[], v2=[], dif=[];
+var l=Number(prompt("Digite o tamanho dos vetores:")), v1=[], v2=[], dif=[], v3=[];
 for (c=0; c<l; c++) {
 	v1[c]=prompt("Digite um número para o primeiro vetor: ");
 	v2[c]=prompt("Digite um número para o segundo vetor:");
+}
+v3=v1.concat(v2);
+for (i=0; i<v3.length; i++) {
+	if (v3.indexOf(v3[i], i)!=-1) {
+		v3.splice(i,1);
+	}
 }
 for (c=0; c<v1.length; c++) {
     if (v2.indexOf(v1[c])==-1) {
 		dif[c]=v1[c];
 	}
 }
-alert("A diferença entre os vetores: "+dif.join(", "));
+alert("A união entre os vetores: "+v3+"\nA diferença entre os vetores: "+dif.join(", "));
