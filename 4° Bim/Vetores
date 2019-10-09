@@ -10,3 +10,11 @@ for (i=0; i<3; i++) {
 	s3+=M[2][i];
 }
 alert(s1+"\n"+s2+"\n"+s3);
+
+var s1=prompt("Digita:"), s2=prompt("Digita:"), v1=s1.split(" "), v2=s2.split(" "), r=[];
+for (c=0; c<v2.length; c++) {
+    if (v1.indexOf(v2[c])==-1) {
+		r[c]=v2[c];
+	}
+}
+alert(r.join(" "));
