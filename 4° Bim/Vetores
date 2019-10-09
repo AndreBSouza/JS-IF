@@ -37,4 +37,4 @@ for (c=0; c<v1.length; c++) {
 		dif[c]=v1[c];
 	}
 }
-alert("A diferença entre os vetores: "+dif.join(" "));
+alert("A diferença entre os vetores: "+dif.join(", "));
