@@ -50,4 +50,4 @@ for (c=0; c<v1.length; c++) {
 		dif[c]=v1[c];
 	}
 }
-alert("A U B = "+v3.join(", ")+"\nA inter B = "+v4.join(", ")+"\nA \ B = "+dif.join(", "));
+alert("A U B = "+v3.join(", ")+"\nA inter B = "+v4.join(", ")+"\nA - B = "+dif.join(", "));
