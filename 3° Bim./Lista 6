@@ -158,3 +158,57 @@ for (c=0; c<12; c++) {
 	}
 }
 alert(nma+" é o jogador mais alto, com "+ma.toFixed(2)+"m de altura.");
+
+
+
+/*
+9.
+Dados três vetores reais de 5 posições, leia estes vetores (usando uma estrutura de repetição), calcule a expressão ((vetor1 * vetor3) / vetor2 ), utilizando os valores da mesma posição, armazenando em um quarto vetor, também de números reais de 5 posições. 
+No final, imprima os números do quarto vetor.
+*/
+
+var v1=[],v2=[],v3=[],v4=[];
+for (c=0; c<5; c++) {
+	v1[c]=Number(prompt("Digite um número para o vetor 1:"));
+}
+for (c=0; c<5; c++) {
+	v2[c]=Number(prompt("Digite um número para o vetor 2:"));
+}
+for (c=0; c<5; c++) {
+	v3[c]=Number(prompt("Digite um número para o vetor 3:"));
+}
+for (c=0; c<5; c++) {
+	v4[c]=(v1[c]*v3[c])/v2[c];
+}
+alert(v4.join(", "));
+
+
+
+/*
+10.
+Leia um conjunto de 30 valores e os coloque em 2 vetores conforme estes valores forem pares ou ímpares. 
+O tamanho dos vetores é de 15 posições. 
+Se algum vetor estiver cheio, escrever uma mensagem informando que o vetor já está cheio. 
+Terminada a leitura, escrever o conteúdo dos dois vetores.
+*/
+
+var v=[], vp=[], vi=[], qap=0, qai=0;
+for (c=0; c<30; c++) {
+	v[c]=Number(prompt("Digite um número inteiro:"));
+}
+for (i=0; i<30; i++) {
+	if (v[i]%2==0) {
+		if (vp.length<15) {
+			vp.push(v[i]);
+		} else {
+			alert("O vetor está cheio.");
+		}
+	} else {
+		if (vi.length<15) {
+			vi.push(v[i]);
+		} else {
+			alert("O vetor está cheio.");
+		}
+	}
+}
+alert("Ímpares: "+vi.join(", ")+"\nPares: "+vp.join(", "));
