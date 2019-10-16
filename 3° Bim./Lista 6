@@ -200,15 +200,33 @@ for (i=0; i<30; i++) {
 	if (v[i]%2==0) {
 		if (vp.length<15) {
 			vp.push(v[i]);
-		} else {
-			alert("O vetor está cheio.");
+		} else if (qap<1) {
+			alert("O vetor dos números pares está cheio.");
+			qap++;
 		}
 	} else {
 		if (vi.length<15) {
 			vi.push(v[i]);
-		} else {
-			alert("O vetor está cheio.");
+		} else if (qai<1) {
+			alert("O vetor dos números ímpares está cheio.");
+			qai++;
 		}
 	}
 }
 alert("Ímpares: "+vi.join(", ")+"\nPares: "+vp.join(", "));
+
+
+
+/*
+11.
+Leia um vetor de 20 posições e mostre- o.
+Em seguida, troque o primeiro elemento com o último, o segundo com o penúltimo, o terceiro com o antepenúltimo, e assim sucessivamente.
+Mostre o novo vetor depois da troca.
+*/
+
+var v=[];
+for (c=0; c<20; c++) {
+	v[c]=prompt("Digite o "+(c+1)+"° elemento do vetor:");
+}
+alert(v.join(" "));
+alert(v.reverse().join(" "));
