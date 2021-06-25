@@ -1,7 +1,16 @@
 //PvP
+
 var xx = "ss";
 while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
-    var N, v = [], p1 = 0, p2 = 0, nj1 = prompt("Qual o nome do 1° jogador?"), nj2 = prompt("Qual o nome do 2° jogador?"), al = "", ij1 = nj1[0] + nj1[1], ij2 = nj2[0] + nj2[1], j1, j2, aux;
+    var N, v = [],
+        p1 = 0,
+        p2 = 0,
+        nj1 = prompt("Qual o nome do 1° jogador?"),
+        nj2 = prompt("Qual o nome do 2° jogador?"),
+        al = "",
+        ij1 = nj1[0] + nj1[1],
+        ij2 = nj2[0] + nj2[1],
+        j1, j2, aux;
     do {
         N = Number(prompt("Digite o número de elementos do jogo: (precisa ser par e não pode ser zero)"));
         if (N == 0 || N % 2 != 0) {
@@ -43,10 +52,19 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
     xx = prompt("Desejam jogar novamente?");
 }
 
-//PvPC
+//PvCPU
+
 var xx = "ss";
 while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() == "ss" || xx.toLowerCase() == "yup" || xx.toLowerCase() == "yes" || xx.toLowerCase() == "arra" || xx.toLowerCase() == "ãrrã" || xx.toLowerCase() == "arrã" || xx.toLowerCase() == "obv" || xx.toLowerCase() == "clr" || xx.toLowerCase() == "ctz" || xx.toLowerCase() == "selena gomez") {
-    var N = 0, v = [], p1 = 0, p2 = 0, nj1 = prompt("Qual é o seu nome?"), al = "", ij1 = nj1[0] + nj1[1], ij2 = "pc", j1, j2, aux;
+    var N = 0,
+        v = [],
+        p1 = 0,
+        p2 = 0,
+        nj1 = prompt("Qual é o seu nome?"),
+        al = "",
+        ij1 = nj1[0] + nj1[1],
+        ij2 = "pc",
+        j1, j2, aux;
     do {
         N = Number(prompt("Digite o número de elementos do jogo:(precisa ser par e não pode ser zero)"));
         if (N == 0 || N % 2 != 0) {
@@ -65,7 +83,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         } else if (j1 == "1" || j1.toLowerCase() == "ultimo" || j1.toLowerCase() == "último") {
             p1 += v.pop();
         }
-        j2 = Math.floor(Math.random()*2)
+        j2 = Math.floor(Math.random() * 2)
         if (j2 == "0") {
             p2 += v.shift();
         } else if (j2 == "1") {
@@ -78,7 +96,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
     if (p1 > p2) {
         alert("Parabéns, " + nj1 + ", você ganhou com " + Math.max(p1, p2) + "pontos. O programa fez " + Math.min(p1, p2) + "pontos.");
     } else if (p1 < p2) {
-        alert(nj1+", você perdeu para o programa, ele fez " + Math.max(p1, p2) + "pontos. Você fez " + Math.min(p1, p2) + "pontos.");
+        alert(nj1 + ", você perdeu para o programa, ele fez " + Math.max(p1, p2) + "pontos. Você fez " + Math.min(p1, p2) + "pontos.");
     } else if (p1 == p2) {
         alert(nj1 + ", você fez " + p1 + " pontos e empatou com o programa.");
     }
