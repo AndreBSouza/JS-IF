@@ -1,3 +1,9 @@
+/*
+
+ATIVIDADE REFEITA EM 25/06/2021
+
+*/
+
 var nr = prompt("Digite um número em algarismos romanos:").trim().toUpperCase();
 var ia = 0,
     q = "";
