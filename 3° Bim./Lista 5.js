@@ -8,8 +8,8 @@ Para traduzir uma palavra em inglês para uma palavra em Pig Latin, coloque a pr
 Assim, a palavra “jump” torna-se “umpjay”, a palavra “the” torna-se “hetay” e a palavra “computer” torna-se “omputercay”.
 */
 
-var p=prompt("Digite uma palavra:");
-alert(p+" em Pig Latin é "+(p.substr(1))+(p[0])+"ay");
+var p = prompt("Digite uma palavra:");
+alert(p + " em Pig Latin é " + (p.substr(1)) + (p[0]) + "ay");
 
 
 
@@ -19,18 +19,18 @@ Escreva um programa que leia uma palavra ou frase e também leia uma letra.
 O programa deve mostrar quantas vezes a letra aparece na palavra ou frase.
 */
 
-var pf=prompt("Digite uma frase ou uma palavra:");
-var l=prompt("Digite uma letra:")
-var x=pf.length;
-var c=0;
-while (x>0){
-  x--;
-  var a=pf[x];
-  if (l==a){
-    c++;
-  }
+var pf = prompt("Digite uma frase ou uma palavra:");
+var l = prompt("Digite uma letra:")
+var x = pf.length;
+var c = 0;
+while (x > 0) {
+	x--;
+	var a = pf[x];
+	if (l == a) {
+		c++;
+	}
 }
-alert(l+" se repete "+c+" vezes.");
+alert(l + " se repete " + c + " vezes.");
 
 
 
@@ -39,8 +39,8 @@ alert(l+" se repete "+c+" vezes.");
 Escreva um programa que leia uma palavra sem acentos e cedilha e mostre essa palavra em letras minúsculas, com a primeira letra em maiúsculo.
 */
 
-var p=prompt("Digite uma palavra:");
-alert(p[0].toUpperCase()+p.substr(1).toLowerCase());
+var p = prompt("Digite uma palavra:");
+alert(p[0].toUpperCase() + p.substr(1).toLowerCase());
 
 
 
@@ -49,9 +49,9 @@ alert(p[0].toUpperCase()+p.substr(1).toLowerCase());
 Escreva um programa que leia o código DDD e um número de telefone e monte uma String no formato: (DD) NNNN-NNNN, em que D representa um dígito do DDD e N um dígito do número de telefone.
 */
 
-var D=prompt("Digite seu DDD:");
-var N=prompt("Digite seu número de telefone:");
-alert("("+D+") "+N.substr(0,4)+"-"+N.substr(4));
+var D = prompt("Digite seu DDD:");
+var N = prompt("Digite seu número de telefone:");
+alert("(" + D + ") " + N.substr(0, 4) + "-" + N.substr(4));
 
 
 
@@ -64,18 +64,18 @@ Caso contrário, o programa deve colocar o número do DDD em uma variável int e
 O conteúdo de cada uma das variáveis deve ser mostrado na tela, separadamente.
 */
 
-var D=prompt("Digite seu número de telefone no formato: (DD) DDDD-DDDD, em que (DD) representa o seu DDD:");
-if (D[0]=="(" && D[3]==")" && D[4]==" " && D[9]=="-" && D.length==14) {
-  var DD=D[1]+D[2];
-  var NN=D.substring(5,9)+D.substring(10);
-  if (!(isNaN(Number(DD))) && !(isNaN(Number(NN)))) {
-	alert("Seu DDD: "+DD);
-	alert("Seu número: "+NN);
-  } else {
-	alert("Número de telefone incorreto.");
-  }
+var D = prompt("Digite seu número de telefone no formato: (DD) DDDD-DDDD, em que (DD) representa o seu DDD:");
+if (D[0] == "(" && D[3] == ")" && D[4] == " " && D[9] == "-" && D.length == 14) {
+	var DD = D[1] + D[2];
+	var NN = D.substring(5, 9) + D.substring(10);
+	if (!(isNaN(Number(DD))) && !(isNaN(Number(NN)))) {
+		alert("Seu DDD: " + DD);
+		alert("Seu número: " + NN);
+	} else {
+		alert("Número de telefone incorreto.");
+	}
 } else {
-  alert("Número de telefone incorreto.");
+	alert("Número de telefone incorreto.");
 }
 
 
@@ -101,16 +101,16 @@ Utilize as seguintes regras para o plural:
 		◦ family = families
 */
 
-var p=(prompt("Digite uma palavra em inglês:")).toLowerCase();
-var a=p;
-if (p[p.length-1]=="o" || (p[p.length-1]=="h" && p[p.length-2]=="c") || (p[p.length-1]=="h" && p[p.length-2]=="s") || (p[p.length-1]=="s" && p[p.length-2]=="s") || p[p.length-1]=="x" || p[p.length-1]=="z") {
-	p+="es";
-} else if ((p[p.length-1]=="y") && (p[p.length-2]!="a" && p[p.length-2]!="e" && p[p.length-2]!="i" && p[p.length-2]!="o" && p[p.length-2]!="u")) {
-	p=p.substring(0,(p.length-1)) + "ies";
+var p = (prompt("Digite uma palavra em inglês:")).toLowerCase();
+var a = p;
+if (p[p.length - 1] == "o" || (p[p.length - 1] == "h" && p[p.length - 2] == "c") || (p[p.length - 1] == "h" && p[p.length - 2] == "s") || (p[p.length - 1] == "s" && p[p.length - 2] == "s") || p[p.length - 1] == "x" || p[p.length - 1] == "z") {
+	p += "es";
+} else if ((p[p.length - 1] == "y") && (p[p.length - 2] != "a" && p[p.length - 2] != "e" && p[p.length - 2] != "i" && p[p.length - 2] != "o" && p[p.length - 2] != "u")) {
+	p = p.substring(0, (p.length - 1)) + "ies";
 } else {
-	p+="s";
+	p += "s";
 }
-alert("O plural de "+a+" é "+p);
+alert("O plural de " + a + " é " + p);
 
 
 
@@ -121,47 +121,47 @@ As datas são impressas em vários formatos comuns. Dois dos formatos mais comun
 Escreva um programa que lê uma data no primeiro formato (como String) e mostre essa data no segundo formato.
 */
 
-var d=prompt("Digite uma data no formato DD/MM/AAAA:");
-var DD=d.substring(0,2);
-var MM=d.substring(3,5);
-var AAAA=d.substring(6);
-if (MM=="01") {
-	MM="janeiro";
+var d = prompt("Digite uma data no formato DD/MM/AAAA:");
+var DD = d.substring(0, 2);
+var MM = d.substring(3, 5);
+var AAAA = d.substring(6);
+if (MM == "01") {
+	MM = "janeiro";
 }
-if (MM=="02") {
-	MM="fevereiro";
+if (MM == "02") {
+	MM = "fevereiro";
 }
-if (MM=="03") {
-	MM="março";
+if (MM == "03") {
+	MM = "março";
 }
-if (MM=="04") {
-	MM="abril";
+if (MM == "04") {
+	MM = "abril";
 }
-if (MM=="05") {
-	MM="maio";
+if (MM == "05") {
+	MM = "maio";
 }
-if (MM=="06") {
-	MM="junho";
+if (MM == "06") {
+	MM = "junho";
 }
-if (MM=="07") {
-	MM="julho";
+if (MM == "07") {
+	MM = "julho";
 }
-if (MM=="08") {
-	MM="agosto";
+if (MM == "08") {
+	MM = "agosto";
 }
-if (MM=="09") {
-	MM="setembro";
+if (MM == "09") {
+	MM = "setembro";
 }
-if (MM=="10") {
-	MM="outubro";
+if (MM == "10") {
+	MM = "outubro";
 }
-if (MM=="11") {
-	MM="novembro";
+if (MM == "11") {
+	MM = "novembro";
 }
-if (MM=="12") {
-	MM="dezembro";
+if (MM == "12") {
+	MM = "dezembro";
 }
-alert(d+" = "+DD+" de "+MM+" de "+AAAA);
+alert(d + " = " + DD + " de " + MM + " de " + AAAA);
 
 
 
@@ -172,18 +172,18 @@ Uma data válida deve ter tamanho 10, possuir dígitos numéricos para D, M e A 
 O valor do mês deve estar entre 1 e 12 e o dia deve ser um número entre 1 e o número máximo de dias do mês.
 */
 
-var d=prompt("Digite uma data no formato DD/MM/AAAA:");
-var DD=Number(d.substr(0,2));
-var MM=Number(d.substr(3,2));
-var AAAA=Number(d.substr(6,4));
-if (!(isNaN(DD)) && !(isNaN(MM)) && !(isNaN(AAAA)) && d.length==10 && (d[2]=="/" || d[2]=="-" || d[2]==".") && (d[5]=="/" || d[5]=="-" || d[5]==".") && MM>=1 && MM<=12) {
-	if ((MM==1 || MM==3 || MM==5 || MM==7 || MM==8 || MM==10 || MM==12) && (DD<=31 && DD>=1) || ((MM==4 || MM==6 || MM==9 || MM==11) && (DD>=1 && DD<=30)) || ((MM==2 && (AAAA>1584 && (AAAA%400==0 || (AAAA%4==0 && AAAA%100!=0)) && (DD>=1 && DD<=29)) || (!(AAAA%400==0 || (AAAA%4==0 && AAAA%100!=0)) && (DD>=1 && DD<=28))))) {
-		alert(d+" é uma data válida.");
+var d = prompt("Digite uma data no formato DD/MM/AAAA:");
+var DD = Number(d.substr(0, 2));
+var MM = Number(d.substr(3, 2));
+var AAAA = Number(d.substr(6, 4));
+if (!(isNaN(DD)) && !(isNaN(MM)) && !(isNaN(AAAA)) && d.length == 10 && (d[2] == "/" || d[2] == "-" || d[2] == ".") && (d[5] == "/" || d[5] == "-" || d[5] == ".") && MM >= 1 && MM <= 12) {
+	if ((MM == 1 || MM == 3 || MM == 5 || MM == 7 || MM == 8 || MM == 10 || MM == 12) && (DD <= 31 && DD >= 1) || ((MM == 4 || MM == 6 || MM == 9 || MM == 11) && (DD >= 1 && DD <= 30)) || ((MM == 2 && (AAAA > 1584 && (AAAA % 400 == 0 || (AAAA % 4 == 0 && AAAA % 100 != 0)) && (DD >= 1 && DD <= 29)) || (!(AAAA % 400 == 0 || (AAAA % 4 == 0 && AAAA % 100 != 0)) && (DD >= 1 && DD <= 28))))) {
+		alert(d + " é uma data válida.");
 	} else {
-		alert(d+" não é uma data válida.");
+		alert(d + " não é uma data válida.");
 	}
 } else {
-	alert(d+" não é uma data válida.")
+	alert(d + " não é uma data válida.")
 }
 
 
@@ -213,15 +213,15 @@ Escreva um programa que leia uma quantia em dinheiro que será impressa em um ch
 Suponha que nove espaços estão disponíveis para imprimir o valor.
 */
 
-var q=prompt("Digite a quantia de dinheiro que será impressa no cheque:");
-if (q.length==9) {
-	q=q.substr(0,3)+"."+q.substr(3);
-}else if (q.length==8) {
-	q=q.substr(0,2)+"."+q.substr(2);
-} else if(q.length==7) {
-	q=q.substr(0,1)+"."+q.substr(1);
+var q = prompt("Digite a quantia de dinheiro que será impressa no cheque:");
+if (q.length == 9) {
+	q = q.substr(0, 3) + "." + q.substr(3);
+} else if (q.length == 8) {
+	q = q.substr(0, 2) + "." + q.substr(2);
+} else if (q.length == 7) {
+	q = q.substr(0, 1) + "." + q.substr(1);
 }
-for (var a=q.length; a<9; a++) {
-	q="*"+q;
+for (var a = q.length; a < 9; a++) {
+	q = "*" + q;
 }
 alert(q);
