@@ -1,19 +1,31 @@
+/*
+
+O PROGRAMA POSSUI ERROS E FALHAS QUE PRETENDO CONSERTAR FUTURAMENTE
+
+*/
+
 function reis(m) {
   for (c = 0, qr = 1; c < 8 && qr <= 2; c++) {
     if (m[c].indexOf(RB) != -1) {
       qr++;
-    } if (m[c].indexOf(RP) != -1) {
+    }
+    if (m[c].indexOf(RP) != -1) {
       qr++;
     }
-  } if (qr <= 2) {
+  }
+  if (qr <= 2) {
     return false;
   } else {
     return true;
   }
-} function tabu(m) {
+}
+
+function tabu(m) {
   var tabu = "      a      b     c      d     e      f      g      h\n8 |_" + m[0].join("_|_") + "_|\n7 |_" + m[1].join("_|_") + "_|\n6 |_" + m[2].join("_|_") + "_|\n5 |_" + m[3].join("_|_") + "_|\n4 |_" + m[4].join("_|_") + "_|\n3 |_" + m[5].join("_|_") + "_|\n2 |_" + m[6].join("_|_") + "_|\n1 |_" + m[7].join("_|_") + "_|";
   return tabu;
-} function ponto() {
+}
+
+function ponto() {
   if (m[lnova][cnova] == PP) {
     pontob += 1;
   } else if (m[lnova][cnova] == CP) {
@@ -35,7 +47,9 @@ function reis(m) {
   } else if (m[lnova][cnova] == DB) {
     pontop += 9;
   }
-} function valid_jog(j) {
+}
+
+function valid_jog(j) {
   if (j != null && j != "") {
     peca = j[0], catual = j[1], latual = Number(j[2]), err = 0, cnova = j[4], lnova = Number(j[5]);
     if (catual == "a") {
@@ -57,7 +71,8 @@ function reis(m) {
     } else {
       alert("Posição atual inválida.");
       err++;
-    } if (latual == 1) {
+    }
+    if (latual == 1) {
       latual = 7;
     } else if (latual == 2) {
       latual = 6;
@@ -74,7 +89,8 @@ function reis(m) {
     } else if (latual > 8 || latual < 1) {
       alert("Posição atual inválida.");
       err++;
-    } if (cnova == "a") {
+    }
+    if (cnova == "a") {
       cnova = 0;
     } else if (cnova == "b") {
       cnova = 1;
@@ -93,7 +109,8 @@ function reis(m) {
     } else {
       alert("Nova posição inválida.");
       err++;
-    } if (lnova == 1) {
+    }
+    if (lnova == 1) {
       lnova = 7;
     } else if (lnova == 2) {
       lnova = 6;
@@ -110,19 +127,24 @@ function reis(m) {
     } else if (lnova < 1 || lnova > 8) {
       alert("Nova posição inválida.");
       err++;
-    } if (lnova == latual && cnova == catual) {
+    }
+    if (lnova == latual && cnova == catual) {
       alert("As posições são iguais.");
       err++;
-    } if (peca != "P" && peca != "B" && peca != "C" && peca != "T" && peca != "D" && peca != "R") {
+    }
+    if (peca != "P" && peca != "B" && peca != "C" && peca != "T" && peca != "D" && peca != "R") {
       alert("Peça inválida.");
       err++;
-    } if (err == 0) {
+    }
+    if (err == 0) {
       return true;
     } else {
       return false;
     }
   }
-} function peao(m, j) {
+}
+
+function peao(m, j) {
   if (play == "B") {
     if (m[latual][catual] != PB) {
       alert("A peça não está nessa posição.");
@@ -145,7 +167,8 @@ function reis(m) {
     } else {
       alert("Movimento inválido.");
       err++;
-    } while (lnova == 0) {
+    }
+    while (lnova == 0) {
       x = prompt("Deseja promover o peão para qual peça?\n\n1 - Cavalo\n2 - Bispo\n3 - Torre\n4 - Dama");
       if (x == "1" || x.toLowerCase() == "cavalo") {
         m[lnova][cnova] = CB;
@@ -191,7 +214,8 @@ function reis(m) {
     } else {
       alert("Movimento inválido.");
       err++;
-    } while (lnova == 8) {
+    }
+    while (lnova == 8) {
       x = prompt("Deseja promover o peão para qual peça?\n\n1 - Cavalo\n2 - Bispo\n3 - Torre\n4 - Dama");
       if (x == "1" || x.toLowerCase() == "cavalo") {
         m[lnova][cnova] = CP;
@@ -216,7 +240,9 @@ function reis(m) {
       }
     }
   }
-} function torre(m, j) {
+}
+
+function torre(m, j) {
   if (play == "B") {
     if (m[latual][catual] != TB) {
       alert("A peça não está nessa posição.");
@@ -228,7 +254,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = TB;
@@ -248,7 +275,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = TB;
@@ -268,7 +296,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = TB;
@@ -288,7 +317,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = TB;
@@ -316,7 +346,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = TP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
@@ -338,7 +369,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = TP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
@@ -360,7 +392,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = TP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
@@ -382,7 +415,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = TP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
@@ -402,7 +436,9 @@ function reis(m) {
       err++;
     }
   }
-} function rei(m, j) {
+}
+
+function rei(m, j) {
   if (play == "B") {
     if (m[latual][catual] != RB) {
       alert("A peça não está nessa posição.");
@@ -444,7 +480,9 @@ function reis(m) {
       err++;
     }
   }
-} function dama(m, j) {
+}
+
+function dama(m, j) {
   if (play == "B") {
     if (m[latual][catual] != DB) {
       alert("A peça não está nessa posição.");
@@ -456,7 +494,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == DP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -476,7 +515,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == DP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -496,7 +536,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == DP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -516,7 +557,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == DP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -530,13 +572,14 @@ function reis(m) {
         }
       }
     } else if (latual < lnova && catual < cnova) {
-      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++ , c++) {
+      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -550,13 +593,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual < cnova) {
-      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++ , c--) {
+      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -570,13 +614,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual > cnova) {
-      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i-- , c--) {
+      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i--, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -590,13 +635,14 @@ function reis(m) {
         }
       }
     } else if (latual < lnova && catual > cnova) {
-      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i-- , c++) {
+      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i--, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = DB;
@@ -624,7 +670,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = DP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == DB) {
@@ -646,7 +693,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == cnova) {
+      }
+      if (i == cnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = DP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == DB) {
@@ -668,7 +716,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = DP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == DB) {
@@ -690,7 +739,8 @@ function reis(m) {
           err++;
           break;
         }
-      } if (i == lnova) {
+      }
+      if (i == lnova) {
         m[latual][catual] = "__";
         m[lnova][cnova] = DP;
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == DB) {
@@ -706,13 +756,14 @@ function reis(m) {
         }
       }
     } else if (latual < lnova && catual < cnova) {
-      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++ , c++) {
+      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == PB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = DP;
@@ -726,13 +777,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual < cnova) {
-      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++ , c--) {
+      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == PB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = DP;
@@ -746,13 +798,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual > cnova) {
-      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i-- , c--) {
+      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i--, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == PB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = DP;
@@ -766,13 +819,14 @@ function reis(m) {
         }
       }
     } else if (latual < lnova && catual > cnova) {
-      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i-- , c++) {
+      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i--, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == PB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = DP;
@@ -790,7 +844,9 @@ function reis(m) {
       err++;
     }
   }
-} function cavalo(m, j) {
+}
+
+function cavalo(m, j) {
   if (play == "B") {
     if (m[latual][catual] != CB) {
       alert("A peça não está nessa posição.");
@@ -1000,19 +1056,22 @@ function reis(m) {
       err++;
     }
   }
-} function bispo(m, j) {
+}
+
+function bispo(m, j) {
   if (play == "B") {
     if (m[latual][catual] != BB) {
       alert("A peça não está nessa posição.");
       err++;
     } else if (latual < lnova && catual < cnova) {
-      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++ , c++) {
+      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = BB;
@@ -1026,13 +1085,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual < cnova) {
-      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++ , c--) {
+      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = BB;
@@ -1046,13 +1106,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual > cnova) {
-      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i-- , c--) {
+      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i--, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = BB;
@@ -1066,13 +1127,14 @@ function reis(m) {
         }
       }
     } else if (latual < lnova && catual > cnova) {
-      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i-- , c++) {
+      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i--, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PP || m[lnova][cnova] == RP || m[lnova][cnova] == DP || m[lnova][cnova] == BP || m[lnova][cnova] == CP || m[lnova][cnova] == TP) {
           ponto();
           m[lnova][cnova] = BB;
@@ -1094,13 +1156,14 @@ function reis(m) {
       alert("A peça não está nessa posição.");
       err++;
     } else if (latual < lnova && catual < cnova) {
-      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++ , c++) {
+      for (i = catual + 1, c = latual + 1; i < cnova && c < lnova; i++, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = BP;
@@ -1114,13 +1177,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual < cnova) {
-      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++ , c--) {
+      for (i = catual + 1, c = latual - 1; i < cnova && c > lnova; i++, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = BP;
@@ -1134,13 +1198,14 @@ function reis(m) {
         }
       }
     } else if (latual > lnova && catual > cnova) {
-      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i-- , c--) {
+      for (i = catual - 1, c = latual - 1; i > cnova && c > lnova; i--, c--) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = BP;
@@ -1154,13 +1219,14 @@ function reis(m) {
         }
       }
     } else if (latual < lnova && catual > cnova) {
-      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i-- , c++) {
+      for (i = catual - 1, c = latual + 1; i > cnova && c > lnova; i--, c++) {
         if (m[c][i] != "__") {
           alert("Movimento inválido.");
           err++;
           break;
         }
-      } if (i == cnova && c == lnova) {
+      }
+      if (i == cnova && c == lnova) {
         if (m[lnova][cnova] == PB || m[lnova][cnova] == RB || m[lnova][cnova] == DB || m[lnova][cnova] == BB || m[lnova][cnova] == CB || m[lnova][cnova] == TB) {
           ponto();
           m[lnova][cnova] = BP;
@@ -1179,10 +1245,33 @@ function reis(m) {
     }
   }
 }
-var TB = "♖", CB = "♘", BB = "♗", DB = "♕", RB = "♔", PB = "♙", TP = "♜", CP = "♞", BP = "♝", DP = "♛", RP = "♚", PP = "♟", m, peca, latual, catual, err, lnova, cnova, j = " ", play, pontob, pontop, jn = "s", x;
+var TB = "♖",
+  CB = "♘",
+  BB = "♗",
+  DB = "♕",
+  RB = "♔",
+  PB = "♙",
+  TP = "♜",
+  CP = "♞",
+  BP = "♝",
+  DP = "♛",
+  RP = "♚",
+  PP = "♟",
+  m, peca, latual, catual, err, lnova, cnova, j = " ",
+  play, pontob, pontop, jn = "s",
+  x;
 alert('Oi, vamos jogar xadrez? Vou vos apresentar o jogo.\n1 - O jogo é composto por um tabuleiro 8x8.\n2 - Cada jogador vai possuir 16 peças no início do jogo.\n3 - O jogador que capturar o rei adversário vence.\n4 - Existem 6 tipos diferentes de peças:\n   Rei (♔/♚; R): move-se para todas as direções mas apenas uma casa por lance.\n   Dama/Rainha (♕/♛; D; 9 pontos): pode mover-se pelas colunas, fileiras e diagonal.\n   Bispo (♗/♝; B; 3 pontos): move-se pela diagonal.\n   Cavalo (♘/♞; C; 3 pontos): movimenta-se sempre em "L", ou seja, duas casas na vertical e uma na horizontal, ou duas na horizontal e uma na vertical.\n   Torre (♖/♜; T; 5 pontos): movimenta-se em direção reta pelas colunas ou fileiras.\n   Peão (♙/♟; P; 1 ponto): movimenta-se apenas uma casa para frente e captura outras peças na primeira casa diagonal superior. No seu primeiro movimento, ele poderá mover-se uma ou  duas casas. Não pode mover-se para trás.\n5 - As jogadas serão indicadas da seguinte maneira: primeiramente escreve-se a letra que representa a peça jogada, depois a coordenada da casa em que a peça estava e a da casa na qual ela foi colocada, colunas e linhas, nesta ordem.\n6 - Bom jogo!');
 while (jn.toLowerCase() == "sim" || jn.toLowerCase() == "si" || jn.toLowerCase() == "s" || jn.toLowerCase() == "ss" || jn.toLowerCase() == "yup" || jn.toLowerCase() == "yurp" || jn.toLowerCase() == "yes" || jn.toLowerCase() == "arra" || jn.toLowerCase() == "ãrrã" || jn.toLowerCase() == "arrã" || jn.toLowerCase() == "obv" || jn.toLowerCase() == "clr" || jn.toLowerCase() == "ctz") {
-  m = [[TP, CP, BP, DP, RP, BP, CP, TP], [PP, PP, PP, PP, PP, PP, PP, PP], ["__", "__", "__", "__", "__", "__", "__", "__"], ["__", "__", "__", "__", "__", "__", "__", "__"], ["__", "__", "__", "__", "__", "__", "__", "__"], ["__", "__", "__", "__", "__", "__", "__", "__"], [PB, PB, PB, PB, PB, PB, PB, PB], [TB, CB, BB, DB, RB, BB, CB, TB]], play = "B", pontob = 0, pontop = 0;
+  m = [
+    [TP, CP, BP, DP, RP, BP, CP, TP],
+    [PP, PP, PP, PP, PP, PP, PP, PP],
+    ["__", "__", "__", "__", "__", "__", "__", "__"],
+    ["__", "__", "__", "__", "__", "__", "__", "__"],
+    ["__", "__", "__", "__", "__", "__", "__", "__"],
+    ["__", "__", "__", "__", "__", "__", "__", "__"],
+    [PB, PB, PB, PB, PB, PB, PB, PB],
+    [TB, CB, BB, DB, RB, BB, CB, TB]
+  ], play = "B", pontob = 0, pontop = 0;
   while (reis(m) == true && j != null && j != "") {
     if (play == "B") {
       j = prompt(tabu(m) + "\n\nPontuação: " + pontob + "\n\nVez do branco, digite a jogada (Ex.: Pb2 b3):");
@@ -1227,13 +1316,15 @@ while (jn.toLowerCase() == "sim" || jn.toLowerCase() == "si" || jn.toLowerCase()
         play = "B";
       }
     }
-  } if (reis(m) == false) {
+  }
+  if (reis(m) == false) {
     if (play == "B") {
       jn = prompt(tabu(m) + "\n\nPreto venceu com " + pontop + " ponto(s)!\nDesejam jogar novamente?");
     } else {
       jn = prompt(tabu(m) + "\n\nBranco venceu com " + pontob + " ponto(s)!\nDesejam jogar novamente?");
     }
-  } if (j == null || j == "") {
+  }
+  if (j == null || j == "") {
     jn = prompt("Desejam jogar novamente?");
   }
 }
