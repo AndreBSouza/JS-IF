@@ -9,28 +9,34 @@ O programa deve conter as funções:
 */
 
 function validarNome(nome) {
-	if (nome.length<3) {
+	if (nome.length < 3) {
 		return false;
 	} else {
 		return true;
 	}
-} function obterSobrenome(nome) {
-	var v=nome.split(" "), l=v.length, s=v[(l-1)];
+}
+
+function obterSobrenome(nome) {
+	var v = nome.split(" "),
+		l = v.length,
+		s = v[(l - 1)];
 	return s.toUpperCase();
-} function contarVogais(nome) {
-	var i=0;
-	for (c=0; c<nome.length; c++) {
-		if (nome[0]=="a" || nome[0]=="e" || nome[0]=="i" || nome[0]=="o" || nome[0]=="u") {
+}
+
+function contarVogais(nome) {
+	var i = 0;
+	for (c = 0; c < nome.length; c++) {
+		if (nome[0] == "a" || nome[0] == "e" || nome[0] == "i" || nome[0] == "o" || nome[0] == "u") {
 			i++;
 		}
 	}
-	if (i<10) {
-		i="0"+i;
+	if (i < 10) {
+		i = "0" + i;
 	}
 	return i;
 }
-var nome=prompt("Digite seu nome:");
-alert(validarNome(nome)+"\n"+obterSobrenome(nome)+""+contarVogais(nome));
+var nome = prompt("Digite seu nome:");
+alert(validarNome(nome) + "\n" + obterSobrenome(nome) + "" + contarVogais(nome));
 
 
 
@@ -44,19 +50,21 @@ Criar a função:
 Retornar o valor do desconto.
 */
 
-function calcularDesconto(valor,taxa) {
-	var xx=valor-(valor*(taxa/100));
+function calcularDesconto(valor, taxa) {
+	var xx = valor - (valor * (taxa / 100));
 	return xx;
 }
-var valor=Number(prompt("Digite o preço da vacina:")), p=prompt("O cliente possui convênio?\n\nSe sim, qual destes?\n1-Amigo dos Animais\n2-Saúde Animal"),taxa;
-if (p=="1" || p.toLowerCase()=="amigo dos animais") {
-	taxa=20;
-} else if (p=="2" || p.toLowerCase()=="saúde animal" || p.toLowerCase=="saude animal") {
-	taxa=50;
+var valor = Number(prompt("Digite o preço da vacina:")),
+	p = prompt("O cliente possui convênio?\n\nSe sim, qual destes?\n1-Amigo dos Animais\n2-Saúde Animal"),
+	taxa;
+if (p == "1" || p.toLowerCase() == "amigo dos animais") {
+	taxa = 20;
+} else if (p == "2" || p.toLowerCase() == "saúde animal" || p.toLowerCase == "saude animal") {
+	taxa = 50;
 } else {
-	taxa=10;
+	taxa = 10;
 }
-alert(taxa+"% de desconto.\nValor a ser pago: R$"+(calcularDesconto(valor,taxa)).toFixed(2)+".");
+alert(taxa + "% de desconto.\nValor a ser pago: R$" + (calcularDesconto(valor, taxa)).toFixed(2) + ".");
 
 
 
@@ -70,24 +78,28 @@ O programa deve conter as funções:
 */
 
 function retornarTracos(nome) {
-	var v=nome.split(" "), l, s;
-	for (c=0; c<v.length; c++) {
-		l=v[c].length;
-		v[c]="-".repeat(l);
+	var v = nome.split(" "),
+		l, s;
+	for (c = 0; c < v.length; c++) {
+		l = v[c].length;
+		v[c] = "-".repeat(l);
 	}
-	s=v.join(" ");
+	s = v.join(" ");
 	return s;
-} function categorizarAluno(idade) {
-	if (idade<=12) {
+}
+
+function categorizarAluno(idade) {
+	if (idade <= 12) {
 		return "Infantil";
-	} else if (idade>=13 && idade<=18) {
+	} else if (idade >= 13 && idade <= 18) {
 		return "Juvenil";
-	} else if (idade>18) {
+	} else if (idade > 18) {
 		return "Adulto";
 	}
 }
-var nome=prompt("Digite o nome de atleta:"), idade=Number(prompt("Digite a idade de "+nome+":"));
-alert(nome+"\n"+retornarTracos(nome)+" "+categorizarAluno(idade));
+var nome = prompt("Digite o nome de atleta:"),
+	idade = Number(prompt("Digite a idade de " + nome + ":"));
+alert(nome + "\n" + retornarTracos(nome) + " " + categorizarAluno(idade));
 
 
 /*
@@ -97,16 +109,17 @@ Faça uma função que receba 2 parâmetros, DANO e SAUDE.
 A função deve retornar verdadeiro se o dano for matar o personagem (ou seja, deixar sua saúde menor ou igual a zero) e falso caso contrário.
 */
 
-function vivo(dano,saude) {
-	var x=saude-dano;
-	if (x>0) {
+function vivo(dano, saude) {
+	var x = saude - dano;
+	if (x > 0) {
 		return true;
 	} else {
 		return false;
 	}
 }
-var saude=Number(prompt("Digite a saude atual:")), dano=Number(prompt("Digite o dano recebido:"));
-alert(vivo(dano,saude));
+var saude = Number(prompt("Digite a saude atual:")),
+	dano = Number(prompt("Digite o dano recebido:"));
+alert(vivo(dano, saude));
 
 
 
@@ -119,15 +132,15 @@ Caso contrário, a função deve retornar falso.
 */
 
 function temChave(v) {
-	if (v.indexOf("chave")!=-1) {
+	if (v.indexOf("chave") != -1) {
 		return true;
 	} else {
 		return false;
 	}
 }
-var v=[];
-for (c=0; c<5; c++) {
-	v[c]=prompt("Digite o item:");
+var v = [];
+for (c = 0; c < 5; c++) {
+	v[c] = prompt("Digite o item:");
 }
 alert(temChave(v));
 
@@ -141,10 +154,10 @@ Precisamos de uma função LimitaPosicao que recebe uma POSICAO que pode ter qua
 */
 
 function LimitaPosicao(posicao) {
-	if (posicao<0 || posicao>100) {
-		posicao=Math.floor(Math.random()*101);
+	if (posicao < 0 || posicao > 100) {
+		posicao = Math.floor(Math.random() * 101);
 	}
 	return posicao;
 }
-var posicao=Number(prompt("Digite a posição:"));
+var posicao = Number(prompt("Digite a posição:"));
 alert(LimitaPosicao(posicao));
