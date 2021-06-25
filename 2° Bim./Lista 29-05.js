@@ -1,11 +1,15 @@
 //1.Teleférico
 var C=parseInt(prompt("Digite a capacidade da cabine:"));
 var A=parseInt(prompt("Digite a  quantidade de alunos:"));
-alert(Math.ceil(A/(C-1)))
+alert(Math.ceil(A/(C-1)));
 
 
 
-//2.Xadrez
+/*
+
+NÃO FOI RESOLVIDO
+
+2.Xadrez
 var L=parseInt(prompt("Digite o número de linhas no tabuleiro:"));
 var C=parseInt(prompt("Digite o número de colunas do tabuleiro:"));
 if (((L%2==0) && (C%2==0))||((L%2!=0) && (C%2!=0))) {
@@ -13,10 +17,9 @@ if (((L%2==0) && (C%2==0))||((L%2!=0) && (C%2!=0))) {
 } else {
     alert(0)
 }
-
-
-
 var L1=Number(prompt("Digite a largura do o o(em metros):"));
 var C1=Number(prompt("Digite o comprimento do o o (em metros):"));
 var L2=Number(prompt("Digite a largura do o outro (em metros):"));
 var C2=Number(prompt("Digite do o outro (em metros):"));
+
+*/
