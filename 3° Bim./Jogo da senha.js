@@ -10,7 +10,8 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         do {
             var a = f.substr((Math.floor(Math.random() * 146)), 4);
         } while (a.indexOf(" ") != -1);
-        var ac = 0, pos = 0;
+        var ac = 0,
+            pos = 0;
         var p = prompt("Digite uma palavra de 4 letras:");
         var al = "PAL.  AC.  POS.";
         for (var c = 10; p != a && c > 0 && p != ""; c--) {
@@ -46,7 +47,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
                 } else {
                     alert("Você não pode mais usar dicas, pois ultrapassou o limite.");
                 }
-				c++;
+                c++;
             }
             if (p.length != 4) {
                 alert("Digite uma palavra válida.");
@@ -87,7 +88,8 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         do {
             var a = m.substr((Math.floor(Math.random() * 174)), 5);
         } while (a.indexOf(" ") != -1);
-        var ac = 0, pos = 0;
+        var ac = 0,
+            pos = 0;
         var p = prompt("Digite uma palavra de 5 letras:");
         var al = "PAL.   AC.  POS.";
         for (var c = 15; p != a && c > 0 && p != ""; c--) {
@@ -132,7 +134,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
                 } else {
                     alert("Você não pode mais usar dicas, pois ultrapassou o limite.");
                 }
-				c++;
+                c++;
             }
             if (p.length != 5) {
                 alert("Digite uma palavra válida.");
@@ -173,7 +175,8 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
         do {
             var a = d.substr((Math.floor(Math.random() * 202)), 6);
         } while (a.indexOf(" ") != -1);
-        var ac = 0, pos = 0;
+        var ac = 0,
+            pos = 0;
         var p = prompt("Digite uma palavra de 6 letras:");
         var al = "PAL.    AC.  POS.";
         for (var c = 15; p != a && c > 0 && p != ""; c--) {
@@ -224,7 +227,7 @@ while (xx.toLowerCase() == "sim" || xx.toLowerCase() == "s" || xx.toLowerCase() 
                 } else {
                     alert("Você não pode mais usar dicas, pois ultrapassou o limite.");
                 }
-				c++;
+                c++;
             }
             if (p.length != 6) {
                 alert("Digite uma palavra válida.");
