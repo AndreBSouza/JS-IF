@@ -10,17 +10,17 @@ Apresentar os resultados de uma tabuada de um número qualquer, a qual deve ser 
 COM FOR
 */
 
-var N=Number(prompt("Digite um número:"));
-var tabu = "***TABUADA DO "+N+"***";
-for (var c=1; c<11; c++) {
-    tabu += "\n"+N+" x "+c+" = "+(N*c)
+var N = Number(prompt("Digite um número:"));
+var tabu = "***TABUADA DO " + N + "***";
+for (var c = 1; c < 11; c++) {
+    tabu += "\n" + N + " x " + c + " = " + (N * c)
 }
 alert(tabu)
 
-for(var c1=1; c1<11; c1++) {
-    console.log("***TABUADA DO "+c1+"***")
-    for(var c2=1; c2<11;c2++) {
-        console.log(c1+" x "+c2+" = "+(c1*c2));
+for (var c1 = 1; c1 < 11; c1++) {
+    console.log("***TABUADA DO " + c1 + "***")
+    for (var c2 = 1; c2 < 11; c2++) {
+        console.log(c1 + " x " + c2 + " = " + (c1 * c2));
     }
     console.log("");
 }
@@ -40,10 +40,10 @@ N=5
 *****
 */
 
-var N=parseInt(prompt("Digite um número:"));
-var c =""
-for(var x =0; x<N; x++) {
-    c+="*"
+var N = parseInt(prompt("Digite um número:"));
+var c = ""
+for (var x = 0; x < N; x++) {
+    c += "*"
     console.log(c)
 }
 
@@ -57,17 +57,17 @@ O programa deve exibir os divisores do número e a soma deles.
 Ex: 28 (1, 2, 4, 7, 14); 6 (1, 2, 3)
 */
 
-var N=parseInt(prompt("Digite um número: "));
-var x="( ";
-var a=0;
-for (var d=0; d<N; d++) {
-    if (N%d==0) {
-        x+=d+" ";
-        a+=d;
+var N = parseInt(prompt("Digite um número: "));
+var x = "( ";
+var a = 0;
+for (var d = 0; d < N; d++) {
+    if (N % d == 0) {
+        x += d + " ";
+        a += d;
     }
 }
-if (a==N) {
-	alert("É um número perfeito!\n"+a+" "+x+")");
+if (a == N) {
+    alert("É um número perfeito!\n" + a + " " + x + ")");
 } else {
-	alert("Não é um número perfeito!\n"+a+" "+x+")");
+    alert("Não é um número perfeito!\n" + a + " " + x + ")");
 }
